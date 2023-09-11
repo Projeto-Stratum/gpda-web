@@ -60,7 +60,7 @@ export default function HomeScreen() {
             className="object-cover object-center"
           />
         </div>
-        <div className="flex items-center bg-black  md:min-h-screen min-h-[1/2vh] md:w-1/2 px-14 md:px-20 xl:px-36">
+        <div className="flex items-center bg-black  md:min-h-screen min-h-[1/2vh] md:w-1/2 px-10 md:px-20 xl:px-36">
           <div className="flex flex-col py-16 justify-center max-w-2xl md:min-h-screen min-h-[1/2vh] gap-10">
             <h2 className="text-3xl font-medium uppercase xl:text-5xl">
               Loren ipsum dolor sit amet, consectetur adipiscing elit. Donec.
@@ -78,7 +78,7 @@ export default function HomeScreen() {
         </div>
       </div>
       <div className="grid w-full grid-rows-2 md:grid-cols-2 md:grid-rows-1">
-        <div className="flex items-center bg-black md:min-h-screen min-h-[1/2vh] px-14 md:px-20 xl:px-36">
+        <div className="flex items-center bg-black md:min-h-screen min-h-[1/2vh] px-10 md:px-20 xl:px-36">
           <div className="flex flex-col py-16 justify-center max-w-2xl md:min-h-screen min-h-[1/2vh] gap-10">
             <h2 className="text-3xl font-medium uppercase xl:text-5xl">
               Loren ipsum dolor sit amet, consectetur adipiscing elit. Donec.
