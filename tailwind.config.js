@@ -7,7 +7,7 @@ module.exports = {
         "content-wrapper-max": "1200px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/assets/images/nasa-original.jpg')",
+        "hero-pattern": "url('/assets/images/nasa-large.jpg')",
       },
       boxShadow: {
         shadowInner: "inset 0 -80px 0 0px rgb(255, 255, 255)",
