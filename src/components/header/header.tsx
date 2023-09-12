@@ -1,18 +1,15 @@
 import useScroll from "@/hooks/useOnScrolls";
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import SideSheet from "./components/sidesheet";
 import { MenuToggle, MenuToggleSpan } from "./styles";
-import { ArrowDown } from "@styled-icons/evaicons-solid";
-import MenuProfile from "./components/menuProfile";
-import { useCreateId } from "@/stores/useId";
 import { useScrollDown } from "@/hooks/useDownScroll";
 
 export default function Header() {
   const windowHeigh = typeof window !== "undefined" ? window.innerHeight : 0;
   const isScrolledHero = useScroll(windowHeigh);
   const isScrolledDown = useScrollDown();
+  const isScrollBase = useScroll(0);
 
   const [showMenu, setShowMenu] = useState(false);
   const [animationOff, setAnimationOff] = useState<boolean>(false);
@@ -44,29 +41,25 @@ export default function Header() {
     <>
       <header className="fixed px-4 top-0 right-0 left-0 z-[60] ">
         <div
-          className={`
-          fixed inset-0 h-16 md:h-24 
-          
-        `}
-        />
-        <div
           className={`${
-            isScrolledDown && "text-opacity-0 text-transparent invisible"
-          } relative text-gray-200 z-50 flex items-center transition-all duration-300 justify-center w-full h-16 px-8 text-sm md:h-24 md:px-20`}
+            isScrollBase &&
+            isScrolledDown &&
+            "text-opacity-0 text-transparent invisible"
+          }  relative text-gray-200 z-50 flex items-center transition-all duration-300 justify-center w-full h-16 px-8 text-sm md:h-24 md:px-20`}
         >
           <div className="grid items-center justify-between min-w-full grid-cols-3 md:grid-cols-3">
             <div className="fixed top-[16px] max-h-[36px] !z-[9999] items-center h-full mt-2 md:hidden">
               <MenuToggle onClick={() => handlerMenu()}>
                 <MenuToggleSpan
-                  isScrolledDown={isScrolledDown}
+                  isScrolledDown={isScrollBase && isScrolledDown}
                   checked={showMenu}
                 ></MenuToggleSpan>
                 <MenuToggleSpan
-                  isScrolledDown={isScrolledDown}
+                  isScrolledDown={isScrollBase && isScrolledDown}
                   checked={showMenu}
                 ></MenuToggleSpan>
                 <MenuToggleSpan
-                  isScrolledDown={isScrolledDown}
+                  isScrolledDown={isScrollBase && isScrolledDown}
                   checked={showMenu}
                 ></MenuToggleSpan>
               </MenuToggle>
@@ -129,7 +122,7 @@ export default function Header() {
         <div
           className={`
           fixed inset-0 duration-300 transition-all h-0 ${
-            isScrolledDown
+            isScrollBase && isScrolledDown
               ? "opacity-0"
               : isScrolledHero && "shadow-sm bg-black md:h-24 h-16 "
           }

@@ -1,35 +1,66 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { MenuToggle, MenuToggleSpan } from "../../styles";
-
 import { StyledContent, StyledOverlay, StyledTitle } from "./styles";
 import { SideSheetProps } from "./types";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 
 const SideSheet = ({ overlay, animationOff, onClose }: SideSheetProps) => {
+  const ulRef = useRef<HTMLUListElement | null>(null);
+
+  const navItems = [
+    {
+      name: "Home",
+      link: "/",
+    },
+    {
+      name: "Explore",
+      link: "/explore",
+    },
+    {
+      name: "Newsletter",
+      link: "/newsletter",
+    },
+    {
+      name: "Sobre",
+      link: "/sobre",
+    },
+  ];
+
+  useEffect(() => {
+    const ulElement = ulRef.current;
+
+    if (ulElement) {
+      const liElements = ulElement.querySelectorAll("li");
+
+      liElements.forEach((li, index) => {
+        // Aplicar a classe de animação com atraso
+        setTimeout(() => {
+          console.log("aplicando animação");
+          li.classList.add("animate-fade-in");
+        }, index * 150);
+      });
+    }
+  }, []);
+
   return createPortal(
     <>
-      {/* overlay */}
       {overlay && <StyledOverlay onClick={onClose} disappear={animationOff} />}
 
-      {/* content */}
       <StyledContent disappear={animationOff}>
-        <ul className="flex flex-col gap-4 mt-20">
-          <li className="pb-2 border-b border-gray-400/60 ">
-            <Link className="" href={"/"}>
-              <p className="text-[1.1rem] w-full duration-200 ">Home</p>
-            </Link>
-          </li>
-          <li className="pb-2 border-b border-gray-400/60 ">
-            <Link href={"/explore"}>
-              <p className="text-[1.1rem] w-full duration-200 ">Explore</p>
-            </Link>
-          </li>
-          <li className="pb-2 border-b border-gray-400/60 ">
-            <Link href={"/prestador/login"} target="_blanck">
-              <p className="text-[1.1rem] w-full duration-200 ">Newsletter</p>
-            </Link>
-          </li>
+        <ul ref={ulRef} className="flex flex-col gap-4 mt-20">
+          {navItems.map((item) => (
+            <li
+              key={item.link}
+              className="pb-2 transition-all border-b opacity-0 border-gray-400/30"
+            >
+              <Link className="" href={"/"}>
+                <p className="text-[1.1rem] w-full duration-200 ">
+                  {item.name}
+                </p>
+              </Link>
+            </li>
+          ))}
         </ul>
       </StyledContent>
     </>,

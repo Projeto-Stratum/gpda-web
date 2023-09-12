@@ -11,13 +11,21 @@ const overlayDisappear = keyframes`
 `;
 
 const contentShow = keyframes`
-  0% { transform: translateX(-100%) }
-  100% { transform: translateX(0%) }
+  0% {
+    transform: translateX(-100%) skew(-15deg);
+  }
+  100% {
+    transform: translateX(0%) skew(0deg);
+  }
 `;
 
 const contentDisappear = keyframes`
-  0% { transform: translateX(0%) }
-  100% { transform: translateX(-100%) }
+  0% {
+    transform: translateX(0%) skewX(0deg);
+  }
+  100% {
+    transform: translateX(-100%) skewX(-5deg);
+  }
 `;
 
 export const StyledOverlay = styled.div`
@@ -31,6 +39,17 @@ export const StyledOverlay = styled.div`
   animation-duration: 300ms;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
+`;
+
+const cascadeAnimation = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
 
 export const StyledContent = styled.div`
@@ -74,4 +93,11 @@ export const IconButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
+`;
+
+export const StyledUl = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: ${cascadeAnimation} 0.5s ease-in-out forwards;
 `;
