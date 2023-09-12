@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <QueryClientProvider client={queryClient}>
       <Head>
-        <meta name="theme-color" content="rgb(255, 255, 255)" />
+        <meta name="theme-color" content="rgb(0, 0, 0)" />
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <meta name="apple-mobile-web-app-title" content="GPDA" />

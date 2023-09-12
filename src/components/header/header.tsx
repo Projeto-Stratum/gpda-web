@@ -51,11 +51,11 @@ export default function Header() {
         />
         <div
           className={`${
-            isScrolledDown && "text-opacity-0 text-transparent "
+            isScrolledDown && "text-opacity-0 text-transparent invisible"
           } relative text-gray-200 z-50 flex items-center transition-all duration-300 justify-center w-full h-16 px-8 text-sm md:h-24 md:px-20`}
         >
           <div className="grid items-center justify-between min-w-full grid-cols-3 md:grid-cols-3">
-            <div className="fixed top-[14px] max-h-[36px] !z-[9999] items-center h-full mt-2 md:hidden">
+            <div className="fixed top-[16px] max-h-[36px] !z-[9999] items-center h-full mt-2 md:hidden">
               <MenuToggle onClick={() => handlerMenu()}>
                 <MenuToggleSpan
                   isScrolledDown={isScrolledDown}

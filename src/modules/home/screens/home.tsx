@@ -3,14 +3,13 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Link from "next/link";
 import { KeyboardArrowDown } from "@styled-icons/material-outlined";
+import { HomeContainer } from "../styles";
 
 export default function HomeScreen() {
   return (
     <>
-      <div
-        className={`min-h-screen bg-hero-pattern bg-center flex justify-center bg-cover bg-no-repeat md:py-7 px-6 pt-[68px] md:pt-[96px] bg-fixed relative z-0`}
-      >
-        <div className="max-w-[900px] flex flex-col justify-between">
+      <HomeContainer>
+        <div className="max-w-[900px] flex flex-col h-full justify-between">
           <div>
             <div className="flex flex-col items-center w-full py-4 ">
               <h1 className=" text-3xl md:text-[2.5rem] my-6 max-w-[650px] py-4 font-Oswald font-medium text-center text-white uppercase">
@@ -49,9 +48,9 @@ export default function HomeScreen() {
             </span>
           </div>
         </div>
-      </div>
+      </HomeContainer>
       <div className="flex flex-col w-full md:flex-row">
-        <div className="flex md:min-h-screen min-h-[50vh] max-h-[50vh] md:w-1/2">
+        <div className="flex md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh] md:w-1/2">
           <Image
             src={"/assets/images/satelite.jpg"}
             alt={"satelite"}
@@ -60,30 +59,30 @@ export default function HomeScreen() {
             className="object-cover object-center"
           />
         </div>
-        <div className="flex items-center bg-black  md:min-h-screen min-h-[50vh] md:w-1/2 px-10 md:px-20 xl:px-36">
-          <div className="flex flex-col py-16 justify-center max-w-2xl md:min-h-screen min-h-[50vh] gap-10">
-            <h2 className="text-3xl font-medium uppercase xl:text-5xl">
+        <div className="flex items-center bg-black  md:min-h-screen min-h-[50vh] md:max-h-screen md:w-1/2 px-10 md:px-20 xl:px-36 py-16">
+          <div className="flex flex-col justify-center max-w-2xl gap-10">
+            <h2 className="text-2xl font-medium uppercase md:text-3xl xl:text-5xl">
               Loren ipsum dolor sit amet, consectetur adipiscing elit. Donec.
             </h2>
-            <p className="md:text-lg">
+            <p className="text-sm md:text-lg">
               Loren ipsum dolor sit amet, consectetur adipiscing elit. Donec ac
               mi sed lectus vestibulum aliquet. Donec ac mi Loren ipsum dolor
               sit amet, consectetur adipiscing elit. Donec ac mi sed lectus
               vestibulum aliquet. Donec ac mi
             </p>
-            <button className="px-4 py-3 focus:bg-white focus:text-black m text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
+            <button className="px-4 py-3 focus:bg-white focus:text-black text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
               ver mais
             </button>
           </div>
         </div>
       </div>
       <div className="flex flex-col w-full md:flex-row">
-        <div className="flex md:w-1/2 order-2 items-center bg-black md:min-h-screen min-h-[50vh] px-10 md:px-20 xl:px-36">
-          <div className="flex  flex-col py-16 justify-center max-w-2xl md:min-h-screen min-h-[50vh]  gap-10">
-            <h2 className="text-3xl font-medium uppercase xl:text-5xl">
+        <div className="flex md:w-1/2 order-2 items-center bg-black md:min-h-screen min-h-[50vh]  md:max-h-screen px-10 md:px-20 xl:px-36 py-16">
+          <div className="flex flex-col justify-center max-w-2xl gap-10 ">
+            <h2 className="text-2xl font-medium uppercase md:text-3xl xl:text-5xl">
               Loren ipsum dolor sit amet, consectetur adipiscing elit. Donec.
             </h2>
-            <p className="md:text-lg">
+            <p className="text-sm md:text-lg">
               Loren ipsum dolor sit amet, consectetur adipiscing elit. Donec ac
               mi sed lectus vestibulum aliquet. Donec ac mi Loren ipsum dolor
               sit amet, consectetur adipiscing elit. Donec ac mi sed lectus
@@ -94,7 +93,7 @@ export default function HomeScreen() {
             </button>
           </div>
         </div>
-        <div className="flex order-1 md:order-2 md:w-1/2 md:min-h-screen min-h-[50vh] max-h-[50vh]">
+        <div className="flex order-1 md:order-2 md:w-1/2 md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh]">
           <Image
             src={"/assets/images/quadroBranco.jpg"}
             alt={"quadroBranco"}
