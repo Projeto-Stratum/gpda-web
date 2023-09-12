@@ -38,7 +38,7 @@ const SideSheet = ({ overlay, animationOff, onClose }: SideSheetProps) => {
         setTimeout(() => {
           console.log("aplicando animação");
           li.classList.add("animate-fade-in");
-        }, index * 150);
+        }, index * 100);
       });
     }
   }, []);

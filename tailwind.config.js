@@ -34,8 +34,7 @@ module.exports = {
       animation: {
         "height-in": "height-in 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
         "height-out": "height-out 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-        "fade-in":
-          "fade-in 500ms cubic-bezier(0.19, 1, 0.22, 1) 0.15s forwards",
+        "fade-in": "fade-in 700ms ease-in forwards",
       },
       keyframes: {
         "height-in": {
