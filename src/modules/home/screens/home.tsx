@@ -9,7 +9,7 @@ export default function HomeScreen() {
   return (
     <>
       <HomeContainer>
-        <div className="max-w-[900px] flex flex-col h-full justify-between">
+        <div className="max-w-[900px] flex z-[1] flex-col h-full justify-between">
           <div>
             <div className="flex flex-col items-center w-full py-4 ">
               <h1 className=" text-3xl md:text-[2.5rem] my-6 max-w-[650px] py-4 font-Oswald font-medium text-center text-white uppercase">
@@ -48,15 +48,22 @@ export default function HomeScreen() {
             </span>
           </div>
         </div>
+        <Image
+          src={"/assets/images/nasa-large.jpg"}
+          alt={"hero"}
+          width={1920}
+          height={1080}
+          className="absolute top-0 left-0 object-cover object-center w-screen h-screen"
+        />
       </HomeContainer>
       <div className="flex flex-col w-full md:flex-row">
-        <div className="flex md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh] md:w-1/2">
+        <div className="flex relative md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh] md:w-1/2">
           <Image
             src={"/assets/images/satelite.jpg"}
             alt={"satelite"}
             width={1920}
             height={1080}
-            className="object-cover object-center"
+            className="absolute top-0 left-0 object-cover object-center md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh] md:w-full"
           />
         </div>
         <div className="flex items-center bg-black  md:min-h-screen min-h-[50vh] md:max-h-screen md:w-1/2 px-10 md:px-20 xl:px-36 py-16">
@@ -88,18 +95,18 @@ export default function HomeScreen() {
               sit amet, consectetur adipiscing elit. Donec ac mi sed lectus
               vestibulum aliquet. Donec ac mi
             </p>
-            <button className="px-4 py-3 focus:bg-white focus:text-black m text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
+            <button className="px-4 py-3 focus:bg-white focus:text-black text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
               ver mais
             </button>
           </div>
         </div>
-        <div className="flex order-1 md:order-2 md:w-1/2 md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh]">
+        <div className="flex relative order-1 md:order-2 md:w-1/2 md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh]">
           <Image
             src={"/assets/images/quadroBranco.jpg"}
             alt={"quadroBranco"}
             width={1920}
             height={1080}
-            className="inline-block object-cover object-center"
+            className="absolute top-0 left-0 object-cover object-center md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh] md:w-full"
           />
         </div>
       </div>

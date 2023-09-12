@@ -15,17 +15,20 @@ export const HomeContainer = styled.div`
   height: 100vh;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  /* align-items: center;
   background: url("/assets/images/spacex-large.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  // TODO: tem que arrumar no mobile
+  // background-attachment: fixed;
+  background-attachment: scroll; */
+  position: relative;
   display: flex;
   justify-content: center;
   padding: 68px 24px 24px 24px;
 
-  animation: ${backgroundTransition} 25s infinite alternate;
+  /* animation: ${backgroundTransition} 25s infinite alternate; */
 
   @media (max-width: 768px) {
     padding: 96px 28px 28px 28px;
