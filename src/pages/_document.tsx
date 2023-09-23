@@ -34,6 +34,13 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap"
           rel="stylesheet"
         ></link>
+        <link
+          rel="preload"
+          href="/fonts/korataki/Korataki-Regular.ttf"
+          as="font"
+          type="font/ttf"
+          crossOrigin=""
+        />
       </Head>
       <body>
         <Main />

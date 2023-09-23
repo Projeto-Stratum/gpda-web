@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import SideSheet from "./components/sidesheet";
 import { MenuToggle, MenuToggleSpan } from "./styles";
 import { useScrollDown } from "@/hooks/useDownScroll";
+import Image from "next/image";
 
 export default function Header() {
   const windowHeigh = typeof window !== "undefined" ? window.innerHeight : 0;
@@ -44,7 +45,7 @@ export default function Header() {
           className={`${
             isScrollBase &&
             isScrolledDown &&
-            "text-opacity-0 text-transparent invisible"
+            "text-opacity-0 text-transparent stroke-transparent invisible"
           }  relative text-gray-200 z-50 flex items-center transition-all duration-300 justify-center w-full h-16 px-8 text-sm md:h-24 md:px-20`}
         >
           <div className="grid items-center justify-between min-w-full grid-cols-3 md:grid-cols-3">
@@ -67,42 +68,38 @@ export default function Header() {
 
             <div className="flex justify-center col-[2] md:col-[1] justify-self-center md:justify-self-start">
               <Link href={"/"}>
-                <div className="cursor-pointer md:ml-0 max-w-fit">
-                  {/* <Image
+                <div className="flex items-center max-h-full gap-2 cursor-pointer md:ml-0 max-w-fit">
+                  <Image
                     alt="logo GPDA"
-                    src="/assets/images/LogoPets.svg"
-                    width={45}
-                    className="min-w-max"
-                    height={45}
-                  /> */}
-                  <div className="flex justify-center text-3xl font-medium ">
+                    src="/assets/images/gpda-logo.svg"
+                    width={56}
+                    className={`transition-all duration-300 ${
+                      isScrollBase && isScrolledDown && "opacity-0"
+                    }`}
+                    height={56}
+                  />
+                  <div className="md:flex hidden justify-center text-2xl font-medium !font-korataki">
                     GPDA
                   </div>
                 </div>
               </Link>
             </div>
 
-            <nav className="justify-center hidden 0 md:flex">
+            <nav className="justify-center hidden text-sm uppercase md:text-base 0 md:flex">
               <ul className="flex space-x-5">
                 <li>
                   <Link href={"/"}>
-                    <span className="text-sm uppercase duration-200 ">
-                      Home
-                    </span>
+                    <span className="duration-300 ">Home</span>
                   </Link>
                 </li>
                 <li>
                   <Link href={"/explore"}>
-                    <span className="text-sm uppercase duration-200 ">
-                      Explore
-                    </span>
+                    <span className="duration-300 ">Explore</span>
                   </Link>
                 </li>
                 <li>
                   <Link target="_blanck" href={"/prestador/login"}>
-                    <span className="text-sm uppercase duration-200 ">
-                      NewsLetter
-                    </span>
+                    <span className="duration-300 ">NewsLetter</span>
                   </Link>
                 </li>
               </ul>
@@ -111,7 +108,7 @@ export default function Header() {
               <div>
                 <span
                   aria-label="incoming"
-                  className="text-sm uppercase duration-200 cursor-default opacity-70"
+                  className="text-sm uppercase duration-300 cursor-default md:text-base opacity-70"
                 >
                   Loja
                 </span>

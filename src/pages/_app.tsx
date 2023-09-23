@@ -20,6 +20,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="site_name" property="og:site_name" content="GPDA" />
         <meta name="author" content="GPDA" />
         <meta name="locale" property="og:locale" content="pt-br" />
+        <link
+          rel="shortcut icon"
+          href="/assets/images/gpda-logo.svg"
+          type="image/x-icon"
+        />
       </Head>
       <Default>
         <Component {...pageProps} />

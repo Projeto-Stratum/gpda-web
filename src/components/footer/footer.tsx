@@ -1,13 +1,35 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const linksFollow = [
-    "Instagram",
-    "TikTok",
-    "Twitter",
-    "Facebook",
-    "Linkedin",
-    "Youtube",
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/gpdaufabc",
+    },
+    {
+      name: "Tiktok",
+      url: "https://www.tiktok.com/@gpdaufabc",
+    },
+    {
+      name: "Linkedin",
+      url: "https://www.linkedin.com/company/gpdaufabc",
+    },
+    {
+      name: "Github",
+      url: "https://github.com/Projeto-Stratum",
+    },
+  ];
+
+  const linkUteis = [
+    {
+      name: "Linktree",
+      url: "https://linktr.ee/gpda_ufabc",
+    },
+    {
+      name: "UFABC",
+      url: "https://www.ufabc.edu.br",
+    },
   ];
 
   const lorenIpson = ["loren", "ipson", "loren", "ipson", "loren", "ipson"];
@@ -15,28 +37,30 @@ export default function Footer() {
   return (
     <footer className="flex flex-col items-center bg-[#161616] text-white">
       <div className="flex flex-col justify-end w-full h-full px-6 max-w-content-wrapper-max">
-        <div className="flex gap-8 md:gap-0 md:flex-row flex-col justify-between min-h-[424px] py-12">
-          <div className="flex items-center justify-center min-h-full ">
+        <div className="flex gap-8 md:gap-0 md:flex-row flex-col justify-between items-center min-h-[424px] py-12">
+          <div className="flex flex-col items-center justify-center min-h-full ">
             <Image
               alt="logo GPDA"
-              src="/assets/images/LogoPets.svg"
-              width={90}
-              className="min-w-max"
-              height={90}
+              src="/assets/images/gpda-logo.svg"
+              width={80}
+              className=""
+              height={80}
             />
+            <div className="text-2xl opacity-90 font-medium !font-korataki">
+              GPDA
+            </div>
           </div>
-          <div className="flex items-center justify-center gap-20">
+          <div className="flex items-start justify-center gap-20">
             <div className="flex flex-col gap-2 text-center">
               <p className="text-[#F4EFEA] mb-2 text-lg font-medium">
                 Links úteis
               </p>
-              {lorenIpson.map((link, idx) => (
-                <span
-                  key={idx}
-                  className="text-sm text-[#F4EFEA]/[.8] hover:text-[#f4efea] cursor-pointer"
-                >
-                  loren ipson
-                </span>
+              {linkUteis.map((link, idx) => (
+                <Link target="_blank" href={link.url} key={idx}>
+                  <span className="text-sm text-[#F4EFEA]/[.8] hover:text-[#f4efea] cursor-pointer">
+                    {link.name}
+                  </span>
+                </Link>
               ))}
             </div>
             <div className="flex flex-col gap-2 text-center">
@@ -44,12 +68,11 @@ export default function Footer() {
                 Siga o GPDA
               </p>
               {linksFollow.map((link) => (
-                <span
-                  key={link}
-                  className="text-sm text-[#F4EFEA]/[.8] hover:text-[#f4efea] cursor-pointer"
-                >
-                  {link}
-                </span>
+                <Link target="_blank" href={link.url} key={link.url}>
+                  <span className="text-sm text-[#F4EFEA]/[.8] hover:text-[#f4efea] cursor-pointer">
+                    {link.name}
+                  </span>
+                </Link>
               ))}
             </div>
             <div className="flex-col hidden gap-2 text-center md:flex">

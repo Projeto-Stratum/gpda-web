@@ -7,7 +7,7 @@ module.exports = {
         "content-wrapper-max": "1200px",
       },
       backgroundImage: {
-        "hero-pattern": "url('/assets/images/nasa-large.jpg')",
+        "hero-pattern": "url('/assets/images/spacex-large.jpg')",
       },
       boxShadow: {
         shadowInner: "inset 0 -80px 0 0px rgb(255, 255, 255)",
@@ -19,6 +19,7 @@ module.exports = {
       fontFamily: {
         Jost: ["Jost", "sans-serif"],
         Oswald: ["Oswald", "sans-serif"],
+        korataki: [`Korataki-Regular`, `sans-serif`],
       },
       colors: {
         primary: "#EDC065",
