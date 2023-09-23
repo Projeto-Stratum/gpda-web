@@ -104,11 +104,11 @@ export default function Header() {
                 </li>
               </ul>
             </nav>
-            <div className="justify-end hidden md:flex">
+            <div className="flex justify-end">
               <div>
                 <span
                   aria-label="incoming"
-                  className="text-sm uppercase duration-300 cursor-default md:text-base opacity-70"
+                  className="text-base uppercase duration-300 cursor-default opacity-70"
                 >
                   Loja
                 </span>

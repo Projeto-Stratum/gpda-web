@@ -29,10 +29,6 @@ const SideSheet = ({ overlay, animationOff, onClose }: SideSheetProps) => {
       name: "Contato",
       link: "/contato",
     },
-    {
-      name: "Loja",
-      link: "/loja",
-    },
   ];
 
   useEffect(() => {
