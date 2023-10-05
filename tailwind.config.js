@@ -16,6 +16,9 @@ module.exports = {
       maxWidth: {
         "content-wrapper-max": "1200px",
       },
+      padding: {
+        "padding-page": "96px 0 0 0",
+      },
       fontFamily: {
         Jost: ["Jost", "sans-serif"],
         Oswald: ["Oswald", "sans-serif"],
