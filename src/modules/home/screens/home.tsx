@@ -63,36 +63,63 @@ export default function HomeScreen() {
         </div>
         <div className="flex items-center bg-black  md:min-h-screen min-h-[50vh] md:max-h-screen md:w-1/2 px-10 md:px-20 xl:px-36 py-16">
           <div className="flex flex-col justify-center max-w-2xl gap-10">
-            <h2 className="text-2xl font-medium uppercase md:text-3xl xl:text-5xl">
-              Loren ipsum dolor sit amet, consectetur adipiscing elit. Donec.
+            <h2 className="text-3xl font-medium uppercase font-korataki">
+              Sobre nós
             </h2>
-            <p className="text-sm md:text-lg">
-              Loren ipsum dolor sit amet, consectetur adipiscing elit. Donec ac
-              mi sed lectus vestibulum aliquet. Donec ac mi Loren ipsum dolor
-              sit amet, consectetur adipiscing elit. Donec ac mi sed lectus
-              vestibulum aliquet. Donec ac mi
+            <p className="text-base md:text-lg">
+              O GPDA é uma entidade de pesquisa do setor aeroespacial criada em
+              2009, vinculada a quatro entidades estudantis da área
+              aeroespacial: Harpia Aerodesign, Colibri, Sirius e Rocket Design.
+              Hoje o vínculo com as demais entidades se estabelece apenas por
+              parcerias e colaborações, mas continuamos com os mesmos objetivos,
+              que são: promover o trabalho em equipe, liderança, planejamento,
+              ética e profissionalismo, incentivando o desenvolvimento de
+              projetos e a participação em competições pelas equipes
+              universitárias da área aeroespacial. Além disso, promovemos a
+              pesquisa e desenvolvimento técnico-científico através do contato e
+              intercâmbio de conhecimento entre alunos, professores e entidades
+              relacionadas.
             </p>
-            <button className="px-4 py-3 focus:bg-white focus:text-black text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
-              ver mais
-            </button>
+            <Link
+              href="https://www.instagram.com/gpdaufabc/?hl=pt"
+              target="_blank"
+              passHref
+            >
+              <button className="px-4 py-3 focus:bg-white focus:text-black text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
+                ver mais
+              </button>
+            </Link>
           </div>
         </div>
       </div>
       <div className="flex flex-col w-full md:flex-row">
         <div className="flex md:w-1/2 order-2 items-center bg-black md:min-h-screen min-h-[50vh]  md:max-h-screen px-10 md:px-20 xl:px-36 py-16">
           <div className="flex flex-col justify-center max-w-2xl gap-10 ">
-            <h2 className="text-2xl font-medium uppercase md:text-3xl xl:text-5xl">
-              Loren ipsum dolor sit amet, consectetur adipiscing elit. Donec.
+            <h2 className="text-3xl font-medium uppercase font-korataki">
+              Faça parte do GPDA
             </h2>
-            <p className="text-sm md:text-lg">
-              Loren ipsum dolor sit amet, consectetur adipiscing elit. Donec ac
-              mi sed lectus vestibulum aliquet. Donec ac mi Loren ipsum dolor
-              sit amet, consectetur adipiscing elit. Donec ac mi sed lectus
-              vestibulum aliquet. Donec ac mi
-            </p>
-            <button className="px-4 py-3 focus:bg-white focus:text-black text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
-              ver mais
-            </button>
+            <div className="text-base md:text-lg">
+              <p>
+                Quer fazer parte dos nossos times? Se inscreva no processo
+                seletivo, que ocorre no início de cada semestre, e venha fazer
+                parte do nosso grupo!
+              </p>
+              <p>
+                Nossos times são: Marketing, Tecnologia da Informação, Área de
+                Projetos (Estruturas e Eletrônica), Área de Pesquisas.
+              </p>
+              <p>
+                Visamos promover o trabalho em equipe, o desenvolvimento de
+                liderança, planejamento, ética e profissionalismo, além de
+                incentivar o desenvolvimento de pesquisas acadêmicas correlatas
+                ao setor aeroespacial.
+              </p>
+            </div>
+            <Link href="https://linktr.ee/gpda_ufabc" target="_blank" passHref>
+              <button className="px-4 py-3 focus:bg-white focus:text-black text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
+                ver mais
+              </button>
+            </Link>
           </div>
         </div>
         <div className="flex relative order-1 md:order-2 md:w-1/2 md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh]">
@@ -102,6 +129,52 @@ export default function HomeScreen() {
             width={1920}
             height={1080}
             className="absolute top-0 left-0 object-cover object-center md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh] md:w-full"
+          />
+        </div>
+      </div>
+      <div className="flex flex-col w-full md:flex-row">
+        <div className="relative flex justify-center w-full min-h-screen px-10 py-16 bg-black md:px-20 xl:px-36">
+          <div className="flex flex-col items-center z-[2] w-full gap-10 ">
+            <h2 className="text-3xl font-medium uppercase font-korataki">
+              Nossos projetos
+            </h2>
+            <div className="flex md:flex-wrap md:flex-row flex-col items-center md:items-stretch justify-between w-full max-w-[1480px]">
+              {Array(3)
+                .fill(0)
+                .map((_, index) => (
+                  <div
+                    key={index}
+                    className="md:min-h-[700px] mb-4 min-h-[280px] cursor-pointer overflow-hidden group relative md:basis-project-card text-[#fafafa]  md:w-full w-[320px]"
+                  >
+                    <div className="relative p-5 z-[1]">
+                      <p className="uppercase font-korataki mb-[5px] text-xl">
+                        Projeto STRAUM
+                      </p>
+                      <p className="text-xl">Sonda atmosférica</p>
+                    </div>
+                    <Image
+                      src={"/assets/images/Module_3.jpg"}
+                      alt={"illustriation1_d"}
+                      width={1920}
+                      height={1080}
+                      className="absolute top-0 left-0 object-cover object-center max-h-full min-h-full transition-all duration-300 ease-in group-hover:scale-105 group-hover:brightness-105"
+                    />
+                  </div>
+                ))}
+            </div>
+
+            <Link href="/projetos" passHref>
+              <button className="px-4 py-3 focus:bg-white focus:text-black text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
+                ver mais
+              </button>
+            </Link>
+          </div>
+          <Image
+            src={"/assets/images/home_illustriation1_d.jpg"}
+            alt={"illustriation1_d"}
+            width={1920}
+            height={1080}
+            className="absolute top-0 left-0 object-cover object-center max-h-full min-h-full"
           />
         </div>
       </div>

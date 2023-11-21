@@ -85,20 +85,20 @@ export default function Header() {
               </Link>
             </div>
 
-            <nav className="justify-center hidden text-sm uppercase md:text-base 0 md:flex">
+            <nav className="justify-center hidden text-sm font-medium uppercase md:text-base 0 md:flex">
               <ul className="flex space-x-5">
                 <li>
                   <Link href={"/"}>
-                    <span className="duration-300 ">Home</span>
+                    <span className="duration-300 ">Início</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href={"/explore"}>
-                    <span className="duration-300 ">Explore</span>
+                  <Link href={"/projetos"}>
+                    <span className="duration-300 ">projetos</span>
                   </Link>
                 </li>
                 <li>
-                  <Link target="_blanck" href={"/prestador/login"}>
+                  <Link href={"/newsletter"}>
                     <span className="duration-300 ">NewsLetter</span>
                   </Link>
                 </li>

@@ -66,6 +66,9 @@ module.exports = {
           },
         },
       },
+      flexBasis: {
+        "project-card": "calc(100%/3 - 10px)",
+      },
     },
   },
   plugins: [

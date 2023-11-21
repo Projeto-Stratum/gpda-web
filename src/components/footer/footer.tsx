@@ -13,7 +13,7 @@ export default function Footer() {
     },
     {
       name: "Linkedin",
-      url: "https://www.linkedin.com/company/gpdaufabc",
+      url: "https://www.linkedin.com/company/grupo-de-pesquisa-e-desenvolvimento-aeroespacial/mycompany/",
     },
     {
       name: "Github",
@@ -83,9 +83,7 @@ export default function Footer() {
                 <span
                   key={idx}
                   className="text-sm text-[#F4EFEA]/[.8] hover:text-[#f4efea] cursor-pointer"
-                >
-                  loren ipson
-                </span>
+                ></span>
               ))}
             </div>
           </div>

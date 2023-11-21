@@ -10,12 +10,12 @@ const SideSheet = ({ overlay, animationOff, onClose }: SideSheetProps) => {
 
   const navItems = [
     {
-      name: "Home",
+      name: "Início",
       link: "/",
     },
     {
-      name: "Explore",
-      link: "/explore",
+      name: "Projetos",
+      link: "/projetos",
     },
     {
       name: "Newsletter",
@@ -38,9 +38,7 @@ const SideSheet = ({ overlay, animationOff, onClose }: SideSheetProps) => {
       const liElements = ulElement.querySelectorAll("li");
 
       liElements.forEach((li, index) => {
-        // Aplicar a classe de animação com atraso
         setTimeout(() => {
-          console.log("aplicando animação");
           li.classList.add("animate-fade-in");
         }, index * 100);
       });
@@ -56,12 +54,10 @@ const SideSheet = ({ overlay, animationOff, onClose }: SideSheetProps) => {
           {navItems.map((item) => (
             <li
               key={item.link}
-              className="pb-2 transition-all border-b opacity-0 border-gray-400/30"
+              className="pb-2 text-sm font-medium uppercase transition-all text-[#fafafa] border-b opacity-0 border-gray-400/30"
             >
-              <Link className="" href={"/"}>
-                <p className="text-[1.1rem] w-full duration-200 ">
-                  {item.name}
-                </p>
+              <Link className="" href={item.link} onClick={onClose}>
+                <p className="w-full duration-200 ">{item.name}</p>
               </Link>
             </li>
           ))}
