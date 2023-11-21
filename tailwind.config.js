@@ -16,6 +16,9 @@ module.exports = {
       maxWidth: {
         "content-wrapper-max": "1200px",
       },
+      padding: {
+        "padding-page": "96px 0 0 0",
+      },
       fontFamily: {
         Jost: ["Jost", "sans-serif"],
         Oswald: ["Oswald", "sans-serif"],
@@ -62,6 +65,9 @@ module.exports = {
             opacity: "1",
           },
         },
+      },
+      flexBasis: {
+        "project-card": "calc(100%/3 - 10px)",
       },
     },
   },
