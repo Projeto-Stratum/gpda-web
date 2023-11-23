@@ -1,0 +1,73 @@
+import { KeyboardArrowDown } from "@styled-icons/material-outlined";
+import Image from "next/image";
+
+export default function ProjetosScreen() {
+  const array = ["lore", "ipsum", "dolor", "sit", "amet", "consectetur"];
+
+  return (
+    <>
+      <div className="h-screen relative flex justify-center md:pt-[96px] md:p-7 p-6 pt-[68px]">
+        <div className="max-w-[900px] flex z-[1] flex-col h-full justify-between">
+          <div className="flex flex-col items-center justify-center w-full h-full py-4 ">
+            <h1 className=" text-2xl md:text-[2.3rem] md:leading-10 my-6 mt-10 max-w-[650px] py-4  font-medium text-center font-korataki text-white uppercase">
+              Projetos
+            </h1>
+          </div>
+          <div>
+            <span className="flex justify-center animate-bounce">
+              <KeyboardArrowDown size={40} className=" animate-pulse" />
+            </span>
+          </div>
+        </div>
+        <Image
+          src={"/assets/images/rideshare_feature.jpg"}
+          alt={"hero"}
+          width={1920}
+          height={1080}
+          className="absolute top-0 left-0 object-cover object-center w-screen h-screen"
+        />
+      </div>
+      <div className=" bg-black min-h-screen w-full pb-20 relative px-12 pt-[90px]">
+        <div className="flex flex-col items-center z-[2] w-full gap-10 ">
+          <div className="flex flex-wrap justify-center w-full max-w-[1680px] gap-5">
+            {Array(12)
+              .fill(0)
+              .map((_, index) => (
+                <div
+                  key={index}
+                  className=" mb-24 min-h-[280px] overflow-hidden  relative  text-[#fafafa] w-full md:basis-project-card-half"
+                >
+                  <div className="relative cursor-pointer p-5 z-[1] pb-[65%]">
+                    <Image
+                      src={"/assets/images/Module_3.jpg"}
+                      alt={"illustriation1_d"}
+                      width={1920}
+                      height={1080}
+                      className="absolute top-0 left-0 object-cover object-center max-h-full h-full min-h-full z-[1] "
+                    />
+                  </div>
+                  <div className="relative mt-12 z-[2]">
+                    <p className="text-xl">Sonda atmosférica</p>
+                    <p className="mt-3 text-xl uppercase font-korataki">
+                      Projeto STRAUM
+                    </p>
+                    <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
+                      ver mais
+                      <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
+                    </button>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+        <Image
+          src={"/assets/images/residentaial_illustriation2_d.jpg"}
+          alt={"illustriation1_d"}
+          width={1920}
+          height={1080}
+          className="absolute top-0 left-0 right-0 z-0 object-cover object-center max-h-full min-w-full"
+        />
+      </div>
+    </>
+  );
+}

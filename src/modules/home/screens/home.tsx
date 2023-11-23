@@ -4,6 +4,8 @@ import "swiper/css/navigation";
 import Link from "next/link";
 import { KeyboardArrowDown } from "@styled-icons/material-outlined";
 import { HomeContainer } from "../styles";
+import Loading from "../loading";
+import { Suspense } from "react";
 
 export default function HomeScreen() {
   return (
@@ -66,27 +68,31 @@ export default function HomeScreen() {
             <h2 className="text-3xl font-medium uppercase font-korataki">
               Sobre nós
             </h2>
-            <p className="text-base md:text-lg">
-              O GPDA é uma entidade de pesquisa do setor aeroespacial criada em
-              2009, vinculada a quatro entidades estudantis da área
-              aeroespacial: Harpia Aerodesign, Colibri, Sirius e Rocket Design.
-              Hoje o vínculo com as demais entidades se estabelece apenas por
-              parcerias e colaborações, mas continuamos com os mesmos objetivos,
-              que são: promover o trabalho em equipe, liderança, planejamento,
-              ética e profissionalismo, incentivando o desenvolvimento de
-              projetos e a participação em competições pelas equipes
-              universitárias da área aeroespacial. Além disso, promovemos a
-              pesquisa e desenvolvimento técnico-científico através do contato e
-              intercâmbio de conhecimento entre alunos, professores e entidades
-              relacionadas.
-            </p>
+            <div className="space-y-2 text-base md:text-lg">
+              <p>
+                O GPDA é uma entidade de pesquisa do setor aeroespacial criada
+                em 2009, vinculada a quatro entidades estudantis da área
+                aeroespacial: Harpia Aerodesign, Colibri, Sirius e Rocket
+                Design.
+              </p>
+              <p>
+                Hoje o vínculo com as demais entidades se estabelece apenas por
+                parcerias e colaborações, mas continuamos com os mesmos
+                objetivos, que são: promover o trabalho em equipe, liderança,
+                planejamento, ética e profissionalismo, incentivando o
+                desenvolvimento de projetos e a participação em competições
+                pelas equipes universitárias da área aeroespacial.
+              </p>
+            </div>
             <Link
               href="https://www.instagram.com/gpdaufabc/?hl=pt"
               target="_blank"
               passHref
+              className="max-w-fit"
             >
-              <button className="px-4 py-3 focus:bg-white focus:text-black text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
+              <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
                 ver mais
+                <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
               </button>
             </Link>
           </div>
@@ -98,7 +104,7 @@ export default function HomeScreen() {
             <h2 className="text-3xl font-medium uppercase font-korataki">
               Faça parte do GPDA
             </h2>
-            <div className="text-base md:text-lg">
+            <div className="space-y-2 text-base md:text-lg">
               <p>
                 Quer fazer parte dos nossos times? Se inscreva no processo
                 seletivo, que ocorre no início de cada semestre, e venha fazer
@@ -106,7 +112,7 @@ export default function HomeScreen() {
               </p>
               <p>
                 Nossos times são: Marketing, Tecnologia da Informação, Área de
-                Projetos (Estruturas e Eletrônica), Área de Pesquisas.
+                Projetos (Estruturas e Eletrônica) e Área de Pesquisas.
               </p>
               <p>
                 Visamos promover o trabalho em equipe, o desenvolvimento de
@@ -115,9 +121,15 @@ export default function HomeScreen() {
                 ao setor aeroespacial.
               </p>
             </div>
-            <Link href="https://linktr.ee/gpda_ufabc" target="_blank" passHref>
-              <button className="px-4 py-3 focus:bg-white focus:text-black text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
+            <Link
+              href="https://linktr.ee/gpda_ufabc"
+              target="_blank"
+              passHref
+              className="max-w-fit"
+            >
+              <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
                 ver mais
+                <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
               </button>
             </Link>
           </div>
@@ -138,13 +150,13 @@ export default function HomeScreen() {
             <h2 className="text-3xl font-medium uppercase font-korataki">
               Nossos projetos
             </h2>
-            <div className="flex md:flex-wrap md:flex-row flex-col items-center md:items-stretch justify-between w-full max-w-[1480px]">
+            <div className="flex md:flex-wrap md:flex-row flex-col items-center md:items-stretch justify-between w-full max-w-[1280px]">
               {Array(3)
                 .fill(0)
                 .map((_, index) => (
                   <div
                     key={index}
-                    className="md:min-h-[700px] mb-4 min-h-[280px] cursor-pointer overflow-hidden group relative md:basis-project-card text-[#fafafa]  md:w-full w-[320px]"
+                    className="md:min-h-[70vh] mb-4 min-h-[280px] cursor-pointer overflow-hidden group relative md:basis-project-card text-[#fafafa]  md:w-full w-[320px]"
                   >
                     <div className="relative p-5 z-[1]">
                       <p className="uppercase font-korataki mb-[5px] text-xl">
@@ -164,8 +176,9 @@ export default function HomeScreen() {
             </div>
 
             <Link href="/projetos" passHref>
-              <button className="px-4 py-3 focus:bg-white focus:text-black text-sm font-bold w-72 min-w-[10rem] uppercase border-2 border-white rounded">
+              <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
                 ver mais
+                <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
               </button>
             </Link>
           </div>
