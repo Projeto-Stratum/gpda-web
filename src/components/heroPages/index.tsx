@@ -25,20 +25,18 @@ export default function HeroPage({ title, image }) {
             </span>
           </div>
         </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <Image
-            src={image}
-            alt={"Noticias-hero"}
-            width={1920}
-            height={1080}
-            className="absolute top-0 left-0 object-cover object-center w-screen h-screen"
-          />
-        </motion.div>
+
+        <Image
+          src={image}
+          alt={"Noticias-hero"}
+          width={1920}
+          height={1080}
+          priority={true}
+          onLoad={(e) => {
+            e.currentTarget.classList.add("animate-fade-in");
+          }}
+          className="absolute top-0 left-0 object-cover object-center w-screen h-screen opacity-0"
+        />
       </div>
     </>
   );

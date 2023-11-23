@@ -27,7 +27,10 @@ export default function NoticiaScreen() {
                 alt={"noiterocket"}
                 width={1920}
                 height={1080}
-                className="absolute top-0 left-0 object-cover object-center max-h-full h-full min-h-full z-[1] "
+                onLoad={(e) => {
+                  e.currentTarget.classList.add("animate-fade-in");
+                }}
+                className="absolute top-0 left-0 opacity-0 object-cover object-center max-h-full h-full min-h-full z-[1] "
               />
             </div>
             <div className="relative mt-12 z-[2]">
