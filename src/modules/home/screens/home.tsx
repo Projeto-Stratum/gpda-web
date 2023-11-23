@@ -188,6 +188,7 @@ export default function HomeScreen() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5 }}
                     key={index}
+                    className="md:min-h-[70vh] mb-4 min-h-[280px] cursor-pointer overflow-hidden group relative md:basis-project-card text-[#fafafa]  md:w-full w-[320px]"
                   >
                     <div
                       key={index}
