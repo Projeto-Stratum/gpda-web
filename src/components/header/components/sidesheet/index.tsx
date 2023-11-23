@@ -18,8 +18,8 @@ const SideSheet = ({ overlay, animationOff, onClose }: SideSheetProps) => {
       link: "/projetos",
     },
     {
-      name: "Newsletter",
-      link: "/newsletter",
+      name: "Notícias",
+      link: "/noticias",
     },
     {
       name: "Sobre",

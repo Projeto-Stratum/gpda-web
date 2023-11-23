@@ -2,7 +2,7 @@ import Head from "next/head";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
 import { useRouter } from "next/router";
-import NewsScreen from "@/modules/newsletter/screens/news";
+import NoticiaScreen from "@/modules/newsletter/screens/Noticia/news";
 
 export default function NewsLetterArtigo() {
   const router = useRouter();
@@ -15,7 +15,7 @@ export default function NewsLetterArtigo() {
         <title>GPDA - {slug} </title>
       </Head>
       <Header />
-      <NewsScreen />
+      <NoticiaScreen />
       <Footer />
     </>
   );

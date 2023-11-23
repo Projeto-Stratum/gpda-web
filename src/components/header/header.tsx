@@ -82,7 +82,7 @@ export default function Header() {
               </Link>
             </div>
 
-            <nav className="justify-center hidden text-sm font-medium uppercase md:text-base 0 md:flex">
+            <nav className="justify-center hidden text-sm font-medium text-white uppercase md:text-base md:flex">
               <ul className="flex space-x-5">
                 <li>
                   <Link href={"/"}>
@@ -95,8 +95,8 @@ export default function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link href={"/newsletter"}>
-                    <span className="">NewsLetter</span>
+                  <Link href={"/noticias"}>
+                    <span className="">Notícias</span>
                   </Link>
                 </li>
               </ul>
