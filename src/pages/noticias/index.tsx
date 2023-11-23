@@ -1,8 +1,7 @@
 import Head from "next/head";
-import HomeScreen from "@/modules/home/screens/home";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-import NewsLetterScreen from "@/modules/newsletter/screens";
+import NewsLetterScreen from "@/modules/newsletter/screens/Noticias";
 
 export default function NewsLetter() {
   return (

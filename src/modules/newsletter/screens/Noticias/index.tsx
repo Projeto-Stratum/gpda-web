@@ -1,31 +1,29 @@
-import HeroPage from "@/components/heroPages";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import HeroPage from "@/components/heroPages";
 
-export default function ProjetosScreen() {
-  const array = ["lore", "ipsum", "dolor", "sit", "amet", "consectetur"];
-
+export default function NewsLetterScreen() {
   return (
     <>
       <HeroPage
-        title={"Projetos"}
-        image={"/assets/images/rideshare_feature.jpg"}
+        title={"Notícias"}
+        image={"/assets/images/Noticias-hero.webp"}
       />
       <div className=" bg-black min-h-screen w-full pb-20 relative px-12 pt-[90px]">
         <div className="flex flex-col items-center z-[2] w-full gap-10 ">
-          <div className="flex flex-wrap justify-center w-full max-w-[1680px] gap-5">
-            {Array(12)
+          <div className="flex flex-wrap justify-start w-full max-w-[1680px] gap-5">
+            {Array(5)
               .fill(0)
               .map((_, index) => (
                 <div
                   key={index}
-                  className=" mb-24 min-h-[280px] relative  text-[#fafafa] w-full md:basis-project-card-half"
+                  className=" mb-24 min-h-[280px]   relative  text-[#fafafa] w-full md:basis-project-card-half"
                 >
                   <div className="relative cursor-pointer p-5 z-[1] pb-[65%]">
-                    <Link href={"/projetos/loren-ipson"}>
+                    <Link href={"/noticias/loren-ipson"}>
                       <Image
-                        src={"/assets/images/Module_3.jpg"}
+                        src={"/assets/images/noiterocket.jpg"}
                         alt={"illustriation1_d"}
                         width={1920}
                         height={1080}
@@ -34,7 +32,7 @@ export default function ProjetosScreen() {
                     </Link>
                   </div>
                   <div className="relative mt-12 z-[2]">
-                    <p className="text-xl">Sonda atmosférica</p>
+                    <p className="text-xl opacity-80">20 de Novembro de 2023</p>
                     <p className="mt-3 text-xl uppercase font-korataki">
                       Projeto STRAUM
                     </p>
@@ -45,7 +43,7 @@ export default function ProjetosScreen() {
                       transition={{ duration: 0.3 }}
                     >
                       <Link
-                        href={"/projetos/loren-ipson"}
+                        href={"/noticias/loren-ipson"}
                         passHref
                         className="max-w-fit"
                       >
@@ -60,13 +58,6 @@ export default function ProjetosScreen() {
               ))}
           </div>
         </div>
-        <Image
-          src={"/assets/images/residentaial_illustriation2_d.jpg"}
-          alt={"illustriation1_d"}
-          width={1920}
-          height={1080}
-          className="absolute top-0 left-0 right-0 z-0 object-cover object-center max-h-full min-w-full"
-        />
       </div>
     </>
   );
