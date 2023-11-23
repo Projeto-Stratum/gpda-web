@@ -45,8 +45,8 @@ export default function Header() {
           className={`${
             isScrollBase &&
             isScrolledDown &&
-            "text-opacity-0 text-transparent stroke-transparent invisible"
-          }  relative text-gray-200 z-50 flex items-center transition-all duration-300 justify-center w-full h-16 px-8 text-sm md:h-24 md:px-20`}
+            "text-opacity-0 text-transparent stroke-transparent invisible opacity-0"
+          }  relative text-gray-200 z-50 flex items-center transition-all duration-500 justify-center w-full h-16 px-8 text-sm md:h-24 md:px-20`}
         >
           <div className="grid items-center justify-between min-w-full grid-cols-3 md:grid-cols-3">
             <div className="fixed top-[16px] max-h-[36px] !z-[9999] items-center h-full mt-2 md:hidden">
@@ -73,12 +73,9 @@ export default function Header() {
                     alt="logo GPDA"
                     src="/assets/images/gpda-logo.svg"
                     width={56}
-                    className={`transition-all duration-300 ${
-                      isScrollBase && isScrolledDown && "opacity-0"
-                    }`}
                     height={56}
                   />
-                  <div className="md:flex hidden justify-center text-2xl font-medium !font-korataki">
+                  <div className="md:flex hidden text-white justify-center text-2xl font-medium !font-korataki">
                     GPDA
                   </div>
                 </div>
@@ -89,17 +86,17 @@ export default function Header() {
               <ul className="flex space-x-5">
                 <li>
                   <Link href={"/"}>
-                    <span className="duration-300 ">Início</span>
+                    <span className="">Início</span>
                   </Link>
                 </li>
                 <li>
                   <Link href={"/projetos"}>
-                    <span className="duration-300 ">projetos</span>
+                    <span className="">projetos</span>
                   </Link>
                 </li>
                 <li>
                   <Link href={"/newsletter"}>
-                    <span className="duration-300 ">NewsLetter</span>
+                    <span className="">NewsLetter</span>
                   </Link>
                 </li>
               </ul>
@@ -108,7 +105,7 @@ export default function Header() {
               <div>
                 <span
                   aria-label="incoming"
-                  className="text-base uppercase duration-300 cursor-default opacity-70"
+                  className="text-base uppercase cursor-default opacity-70"
                 >
                   Loja
                 </span>

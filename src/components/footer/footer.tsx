@@ -7,10 +7,10 @@ export default function Footer() {
       name: "Instagram",
       url: "https://www.instagram.com/gpdaufabc",
     },
-    {
-      name: "Tiktok",
-      url: "https://www.tiktok.com/@gpdaufabc",
-    },
+    // {
+    //   name: "Tiktok",
+    //   url: "https://www.tiktok.com/@gpdaufabc",
+    // },
     {
       name: "Linkedin",
       url: "https://www.linkedin.com/company/grupo-de-pesquisa-e-desenvolvimento-aeroespacial/mycompany/",
@@ -29,6 +29,17 @@ export default function Footer() {
     {
       name: "UFABC",
       url: "https://www.ufabc.edu.br",
+    },
+  ];
+
+  const linkParceiros = [
+    {
+      name: "Harpia Aerodesign",
+      url: "https://www.instagram.com/harpiaaerodesign/?hl=pt-br",
+    },
+    {
+      name: "Rocket Design",
+      url: "https://www.instagram.com/ufabcrocketdesign/",
     },
   ];
 
@@ -77,13 +88,14 @@ export default function Footer() {
             </div>
             <div className="flex-col hidden gap-2 text-center md:flex">
               <p className="text-[#F4EFEA] mb-2 text-lg font-medium">
-                Sites parceiros
+                Nossos parceiros
               </p>
-              {lorenIpson.map((link, idx) => (
-                <span
-                  key={idx}
-                  className="text-sm text-[#F4EFEA]/[.8] hover:text-[#f4efea] cursor-pointer"
-                ></span>
+              {linkParceiros.map((link) => (
+                <Link target="_blank" href={link.url} key={link.url}>
+                  <span className="text-sm text-[#F4EFEA]/[.8] hover:text-[#f4efea] cursor-pointer">
+                    {link.name}
+                  </span>
+                </Link>
               ))}
             </div>
           </div>
