@@ -46,7 +46,7 @@ export default function Header() {
             isScrollBase &&
             isScrolledDown &&
             "text-opacity-0 text-transparent stroke-transparent invisible opacity-0"
-          }  relative text-gray-200 z-50 flex items-center transition-all duration-500 justify-center w-full h-16 px-8 text-sm md:h-24 md:px-20`}
+          }  relative text-gray-200 z-50 flex items-center transition-all duration-500 justify-center w-full h-16 px-8 text-sm md:h-24 `}
         >
           <div className="grid items-center justify-between min-w-full grid-cols-3 md:grid-cols-3">
             <div className="fixed top-[16px] max-h-[36px] !z-[9999] items-center h-full mt-2 md:hidden">
