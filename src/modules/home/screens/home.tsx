@@ -48,20 +48,17 @@ export default function HomeScreen() {
             </span>
           </div>
         </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-        >
-          <Image
-            src={"/assets/images/spacex-large.jpg"}
-            alt={"hero"}
-            width={1920}
-            height={1080}
-            className="absolute top-0 left-0 object-cover object-center w-screen h-screen"
-          />
-        </motion.div>
+
+        <Image
+          src={"/assets/images/spacex-large.jpg"}
+          alt={"hero"}
+          width={1920}
+          height={1080}
+          onLoad={(e) => {
+            e.currentTarget.classList.add("animate-fade-in");
+          }}
+          className="absolute top-0 left-0 object-cover object-center w-screen h-screen opacity-0"
+        />
       </div>
       <div className="flex flex-col w-full md:flex-row">
         <div className="flex relative md:min-h-screen md:max-h-screen min-h-[50vh] max-h-[50vh] md:w-1/2">

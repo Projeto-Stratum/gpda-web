@@ -28,8 +28,12 @@ export default function ProjetosScreen() {
                         src={"/assets/images/Module_3.jpg"}
                         alt={"illustriation1_d"}
                         width={1920}
+                        loading="lazy"
+                        onLoad={(e) => {
+                          e.currentTarget.classList.add("animate-fade-in");
+                        }}
                         height={1080}
-                        className="absolute top-0 left-0 object-cover object-center max-h-full h-full min-h-full z-[1] "
+                        className="absolute top-0 left-0 opacity-0 object-cover object-center max-h-full h-full min-h-full z-[1] "
                       />
                     </Link>
                   </div>
