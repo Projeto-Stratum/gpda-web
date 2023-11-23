@@ -158,19 +158,25 @@ export default function HomeScreen() {
                     key={index}
                     className="md:min-h-[70vh] mb-4 min-h-[280px] cursor-pointer overflow-hidden group relative md:basis-project-card text-[#fafafa]  md:w-full w-[320px]"
                   >
-                    <div className="relative p-5 z-[1]">
-                      <p className="uppercase font-korataki mb-[5px] text-xl">
-                        Projeto STRAUM
-                      </p>
-                      <p className="text-xl">Sonda atmosférica</p>
-                    </div>
-                    <Image
-                      src={"/assets/images/Module_3.jpg"}
-                      alt={"illustriation1_d"}
-                      width={1920}
-                      height={1080}
-                      className="absolute top-0 left-0 object-cover object-center max-h-full min-h-full transition-all duration-300 ease-in group-hover:scale-105 group-hover:brightness-105"
-                    />
+                    <Link
+                      href={"/projetos/loren-ipson"}
+                      passHref
+                      className="max-w-fit"
+                    >
+                      <div className="relative p-5 z-[1]">
+                        <p className="uppercase font-korataki mb-[5px] text-xl">
+                          Projeto STRAUM
+                        </p>
+                        <p className="text-xl">Sonda atmosférica</p>
+                      </div>
+                      <Image
+                        src={"/assets/images/Module_3.jpg"}
+                        alt={"illustriation1_d"}
+                        width={1920}
+                        height={1080}
+                        className="absolute top-0 left-0 object-cover object-center max-h-full min-h-full transition-all duration-300 ease-in group-hover:scale-105 group-hover:brightness-105"
+                      />
+                    </Link>
                   </div>
                 ))}
             </div>

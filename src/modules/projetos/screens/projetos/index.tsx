@@ -1,5 +1,6 @@
 import { KeyboardArrowDown } from "@styled-icons/material-outlined";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjetosScreen() {
   const array = ["lore", "ipsum", "dolor", "sit", "amet", "consectetur"];
@@ -38,23 +39,31 @@ export default function ProjetosScreen() {
                   className=" mb-24 min-h-[280px] overflow-hidden  relative  text-[#fafafa] w-full md:basis-project-card-half"
                 >
                   <div className="relative cursor-pointer p-5 z-[1] pb-[65%]">
-                    <Image
-                      src={"/assets/images/Module_3.jpg"}
-                      alt={"illustriation1_d"}
-                      width={1920}
-                      height={1080}
-                      className="absolute top-0 left-0 object-cover object-center max-h-full h-full min-h-full z-[1] "
-                    />
+                    <Link href={"/projetos/loren-ipson"}>
+                      <Image
+                        src={"/assets/images/Module_3.jpg"}
+                        alt={"illustriation1_d"}
+                        width={1920}
+                        height={1080}
+                        className="absolute top-0 left-0 object-cover object-center max-h-full h-full min-h-full z-[1] "
+                      />
+                    </Link>
                   </div>
                   <div className="relative mt-12 z-[2]">
                     <p className="text-xl">Sonda atmosférica</p>
                     <p className="mt-3 text-xl uppercase font-korataki">
                       Projeto STRAUM
                     </p>
-                    <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
-                      ver mais
-                      <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
-                    </button>
+                    <Link
+                      href={"/projetos/loren-ipson"}
+                      passHref
+                      className="max-w-fit"
+                    >
+                      <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
+                        ver mais
+                        <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
+                      </button>
+                    </Link>
                   </div>
                 </div>
               ))}

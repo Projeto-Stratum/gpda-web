@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Header from "@/components/header/header";
 import Footer from "@/components/footer/footer";
-import ProjetosScreen from "@/modules/projetos/screens/projetos";
+import ProjetoScreen from "@/modules/projetos/screens/projeto/projeto";
 
 export default function NewsLetter() {
   return (
@@ -10,7 +10,7 @@ export default function NewsLetter() {
         <title>GPDA - Projetos</title>
       </Head>
       <Header />
-      <ProjetosScreen />
+      <ProjetoScreen />
       <Footer />
     </>
   );
