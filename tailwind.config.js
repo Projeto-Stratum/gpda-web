@@ -46,6 +46,11 @@ module.exports = {
         overlayMouseOut: "overlayMouseOut 300ms ease-out 1",
         buttonColorMouseIn: "buttonColorMouseIn 300ms ease-out 1",
         buttonColorMouseOut: "buttonColorMouseOut 300ms ease-out 1",
+        translateDownUpY: "translateUpY 2s ease-out forwards",
+        translateUpDownY: "translateDownY 2s ease-out forwards",
+        opacityOut: "opacityOut 400ms ease-out forwards 2s",
+        "infinite-left-scroll": "infinite-left-scroll 55s linear infinite",
+        "infinite-right-scroll": "infinite-right-scroll 55s linear infinite",
       },
       keyframes: {
         "height-in": {
@@ -126,6 +131,55 @@ module.exports = {
           },
           "100%": {
             backgroundColor: "transparent",
+          },
+        },
+        translateUpY: {
+          "0%": {
+            transform: "translateY(100%)",
+            opacity: "0",
+          },
+          "25%": {
+            transform: "translateY(0%)",
+            opacity: "1",
+          },
+          "75%": {
+            transform: "translateY(0%)",
+          },
+          "100%": {
+            transform: "translateY(100%)",
+          },
+        },
+        translateDownY: {
+          "0%": {
+            transform: "translateY(-100%)",
+            opacity: "0",
+          },
+          "25%": {
+            transform: "translateY(0%)",
+            opacity: "1",
+          },
+          "75%": {
+            transform: "translateY(0%)",
+          },
+          "100%": {
+            transform: "translateY(-100%)",
+          },
+        },
+        "infinite-left-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        "infinite-right-scroll": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        opacityOut: {
+          "0%": {
+            opacity: "1",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translateY(-100%)",
           },
         },
       },
