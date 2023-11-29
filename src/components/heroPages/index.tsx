@@ -9,12 +9,12 @@ export default function HeroPage({ title, image }) {
         <div className="max-w-[900px] flex z-[1] flex-col h-full justify-between">
           <div className="flex flex-col items-center justify-center w-full h-full py-4 ">
             <motion.div
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: -36 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
             >
-              <h1 className=" text-2xl md:text-[2.3rem] md:leading-10  max-w-[650px] py-4  font-medium text-center font-korataki text-white uppercase">
+              <h1 className=" text-2xl md:text-[2.3rem] md:leading-10  max-w-[650px] py-4 absolute top-1/2 left-1/2 font-medium -translate-y-1/2 -translate-x-1/2 text-center font-korataki text-white uppercase">
                 {title}
               </h1>
             </motion.div>

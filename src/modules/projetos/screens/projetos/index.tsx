@@ -2,9 +2,10 @@ import HeroPage from "@/components/heroPages";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useGetRocketsSpaceX } from "@/services/noticias";
 
 export default function ProjetosScreen() {
-  const array = ["lore", "ipsum", "dolor", "sit", "amet", "consectetur"];
+  const { data, isLoading } = useGetRocketsSpaceX();
 
   return (
     <>
@@ -15,17 +16,17 @@ export default function ProjetosScreen() {
       <div className=" bg-black min-h-screen w-full pb-20 relative px-12 pt-[90px]">
         <div className="flex flex-col items-center z-[2] w-full gap-10 ">
           <div className="flex flex-wrap justify-center w-full max-w-[1680px] gap-5">
-            {Array(12)
-              .fill(0)
-              .map((_, index) => (
+            {!isLoading &&
+              data &&
+              data.map((rocket) => (
                 <div
-                  key={index}
+                  key={rocket.id}
                   className=" mb-24 min-h-[280px] relative  text-[#fafafa] w-full md:basis-project-card-half"
                 >
                   <div className="relative cursor-pointer p-5 z-[1] pb-[65%]">
                     <Link href={"/projetos/loren-ipson"}>
                       <Image
-                        src={"/assets/images/Module_3.jpg"}
+                        src={rocket.flickr_images[0]}
                         alt={"illustriation1_d"}
                         width={1920}
                         loading="lazy"
@@ -38,9 +39,9 @@ export default function ProjetosScreen() {
                     </Link>
                   </div>
                   <div className="relative mt-12 z-[2]">
-                    <p className="text-xl">Sonda atmosférica</p>
+                    <p className="text-xl">{rocket.country}</p>
                     <p className="mt-3 text-xl uppercase font-korataki">
-                      Projeto STRAUM
+                      {rocket.rocket_name}
                     </p>
                     <motion.div
                       initial={{ opacity: 0, y: 100 }}

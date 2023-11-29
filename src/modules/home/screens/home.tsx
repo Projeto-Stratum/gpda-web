@@ -97,12 +97,7 @@ export default function HomeScreen() {
                   pelas equipes universitárias da área aeroespacial.
                 </p>
               </div>
-              <Link
-                href="https://www.instagram.com/gpdaufabc/?hl=pt"
-                target="_blank"
-                passHref
-                className="max-w-fit"
-              >
+              <Link href="/sobre" passHref className="max-w-fit">
                 <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
                   ver mais
                   <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>

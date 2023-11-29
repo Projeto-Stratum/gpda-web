@@ -10,4 +10,8 @@ export const apiCEP = axios.create({
   baseURL: "https://viacep.com.br/ws/",
 });
 
+export const apiSpaceX = axios.create({
+  baseURL: "https://api.spacexdata.com/v3/",
+});
+
 setupInterceptors(api);
