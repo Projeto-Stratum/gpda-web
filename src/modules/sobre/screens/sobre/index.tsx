@@ -76,13 +76,6 @@ export default function SobreScreen() {
             />
           </div>
         </div>
-        <Image
-          src={"/assets/images/background-gradient.jpg"}
-          alt={"illustriation1_d"}
-          width={1920}
-          height={1080}
-          className="absolute top-0 left-0 right-0 z-0 h-full max-h-full min-w-full"
-        />
       </div>
       <div className="relative py-20 bg-black">
         <div className={`lg:max-w-screen-lg relative px-4 mx-auto  z-10`}>
@@ -99,11 +92,11 @@ export default function SobreScreen() {
           </div>
         </div>
         <Image
-          src={"/assets/images/residentaial_illustriation2_d.jpg"}
+          src={"/assets/images/background-gradient.jpg"}
           alt={"illustriation1_d"}
           width={1920}
           height={1080}
-          className="absolute top-0 left-0 z-[1] right-0 object-cover object-center h-full min-w-full"
+          className="absolute top-0 left-0 right-0 z-0 h-full max-h-full min-w-full "
         />
       </div>
     </>

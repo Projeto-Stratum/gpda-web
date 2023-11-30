@@ -99,6 +99,11 @@ export default function Header() {
                     <span className="">Notícias</span>
                   </Link>
                 </li>
+                <li>
+                  <Link href={"/sobre"}>
+                    <span className="">Sobre</span>
+                  </Link>
+                </li>
               </ul>
             </nav>
             <div className="flex justify-end">

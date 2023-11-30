@@ -81,7 +81,7 @@ export default function HomeScreen() {
               <h2 className="text-3xl font-medium uppercase font-korataki">
                 Sobre nós
               </h2>
-              <div className="space-y-2 text-base md:text-lg">
+              <div className="mb-12 space-y-2 text-base md:text-lg">
                 <p>
                   O GPDA é uma entidade de pesquisa do setor aeroespacial criada
                   em 2009, vinculada a quatro entidades estudantis da área
@@ -98,7 +98,7 @@ export default function HomeScreen() {
                 </p>
               </div>
               <Link href="/sobre" passHref className="max-w-fit">
-                <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
+                <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3  text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
                   ver mais
                   <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
                 </button>
@@ -119,7 +119,7 @@ export default function HomeScreen() {
               <h2 className="text-3xl font-medium uppercase font-korataki">
                 Faça parte do GPDA
               </h2>
-              <div className="space-y-2 text-base md:text-lg">
+              <div className="mb-12 space-y-2 text-base md:text-lg">
                 <p>
                   Quer fazer parte dos nossos times? Se inscreva no processo
                   seletivo, que ocorre no início de cada semestre, e venha fazer
@@ -142,7 +142,7 @@ export default function HomeScreen() {
                 passHref
                 className="max-w-fit"
               >
-                <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
+                <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3  text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
                   ver mais
                   <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
                 </button>
