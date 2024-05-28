@@ -3,9 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useGetRocketsSpaceX } from "@/services/noticias";
+import myData from "@/utils/mockData/projetos.json";
 
 export default function ProjetosScreen() {
-  const { data, isLoading } = useGetRocketsSpaceX();
+  // const { data, isLoading } = useGetRocketsSpaceX();
+  const isLoading = false
+  const { data } = myData
 
   return (
     <>
@@ -18,15 +21,15 @@ export default function ProjetosScreen() {
           <div className="flex flex-wrap justify-center w-full max-w-[1680px] gap-5">
             {!isLoading &&
               data &&
-              data.map((rocket) => (
+              data.map((project) => (
                 <div
-                  key={rocket.id}
+                  key={project.id}
                   className=" mb-24 min-h-[280px] relative  text-[#fafafa] w-full md:basis-project-card-half"
                 >
                   <div className="relative cursor-pointer p-5 z-[1] pb-[65%]">
-                    <Link href={"/projetos/loren-ipson"}>
+                    <Link href={`/projetos/${project.slug}`}>
                       <Image
-                        src={rocket.flickr_images[0]}
+                        src={project.image}
                         alt={"illustriation1_d"}
                         width={1920}
                         loading="lazy"
@@ -39,9 +42,9 @@ export default function ProjetosScreen() {
                     </Link>
                   </div>
                   <div className="relative mt-12 z-[2]">
-                    <p className="text-xl">{rocket.country}</p>
+                    <p className="text-xl">Departamento de {project.departamento}</p>
                     <p className="mt-3 text-xl uppercase font-korataki">
-                      {rocket.rocket_name}
+                      {project.title}
                     </p>
                     <motion.div
                       initial={{ opacity: 0, y: 100 }}
@@ -50,7 +53,7 @@ export default function ProjetosScreen() {
                       transition={{ duration: 0.3 }}
                     >
                       <Link
-                        href={"/projetos/loren-ipson"}
+                        href={`/projetos/${project.slug}`}
                         passHref
                         className="max-w-fit"
                       >

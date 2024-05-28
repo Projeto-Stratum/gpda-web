@@ -5,8 +5,16 @@ import { motion } from "framer-motion";
 import MembersPack from "@/components/bubbleChart";
 import Link from "next/link";
 import { dataMember } from "../../data";
+import timeData from "@/utils/mockData/time.json";
+
 
 export default function SobreScreen() {
+
+  const {data} = timeData;
+
+  const coordenação = data.filter((member) => member.tier <= 2);
+  const equipe = data.filter((member) => member.tier > 2);
+
   return (
     <>
       <HeroPage title={"Sobre nós"} image={"/assets/images/Sobre_Header.jpg"} />
@@ -65,14 +73,14 @@ export default function SobreScreen() {
           <div className="text-center">
             <InfiniteScroll
               direction="left"
-              items={Array.from({ length: 8 })}
+              items={coordenação}
             />
             <div className="flex justify-center px-12 my-12 text-2xl md:text-4xl font-korataki">
               Nossa equipe
             </div>
             <InfiniteScroll
               direction="right"
-              items={Array.from({ length: 8 })}
+              items={equipe}
             />
           </div>
         </div>

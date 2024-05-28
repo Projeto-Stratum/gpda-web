@@ -110,7 +110,7 @@ export default function Footer() {
       <div className="w-full flex justify-center py-9 text-[#F4EFEA]/[.9]  border-t border-[#F4EFEA]/[.9]">
         <div className="flex items-center justify-center w-full px-6 md:justify-between max-w-content-wrapper-max">
           <p className="cursor-default">
-            Copyright © 2023 GPDA. All Rights Reserved.
+            Copyright © {new Date().getFullYear()} GPDA. All Rights Reserved.
           </p>
           <p className="hidden cursor-pointer md:block">
             Terms & Conditions | Privacy Policy

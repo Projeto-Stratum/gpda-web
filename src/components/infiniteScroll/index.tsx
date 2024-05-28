@@ -19,21 +19,24 @@ export default function InfiniteScroll({ items, direction = "left" }) {
           x-ref="logos"
           className={`flex items-center justify-center md:justify-start [&_li]:mx-1 [&_img]:max-w-none ${directionText}`}
         >
-          {items.map((_, i) => (
+          {items.map((data, i) => (
             <li key={i}>
               <div className="flex flex-col gap-6 justify-around items-center md:w-[360px]  w-[200px]">
                 <div className="relative md:w-[200px] md:h-[200px] w-[124px] h-[124px] overflow-hidden ">
                   <Image
-                    src="/assets/images/noiterocket.jpg"
-                    alt="Logo GPDA"
-                    width={1980}
-                    height={1080}
+                    src={data.image}
+                    alt="imagem do membro da equipe"
+                    width={300}
+                    height={300}
+                    onLoad={(e) => {
+                      e.currentTarget.classList.add("animate-fade-in");
+                    }}
                     className="absolute object-cover w-full h-full"
                   />
                 </div>
                 <div className="space-y-1 text-sm md:text-base">
-                  <p className=" font-korataki">Cauli Vilela Ferrreira {i}</p>
-                  <p className="opacity-80">Coordenador de Tecnologia</p>
+                  <p className=" font-korataki">{data.name}</p>
+                  <p className="opacity-80"><span className="capitalize">{data.cargo}</span> {data.area && <span>de <span className="capitalize">{data.area}</span></span>}</p>
                 </div>
               </div>
             </li>
