@@ -4,8 +4,12 @@ import "swiper/css/navigation";
 import Link from "next/link";
 import { KeyboardArrowDown } from "@styled-icons/material-outlined";
 import { motion } from "framer-motion";
+import myData from "@/utils/mockData/projetos.json";
 
 export default function HomeScreen() {
+
+  const fisrtThreeProjects = myData.data.slice(0, 3);
+
   return (
     <>
       <div className="h-screen  bg-black flex justify-center md:pt-[96px] md:p-7 p-6 pt-[68px]">
@@ -28,11 +32,12 @@ export default function HomeScreen() {
                 <input
                   className="w-full caret-white placeholder:text-white/60 pr-10 pl-6 font-semibold md:max-w-[60%] h-[50px] border-2 border-white/60 bg-white/10 rounded text-black outline-none focus:border-white"
                   type="text"
+                  disabled
                   placeholder="Email"
                   autoComplete="off"
                   aria-label="Service Email"
                 />
-                <button className="bg-white md:max-w-[30%] flex-1 text-black uppercase min-h-[50px] rounded text-xs font-bold py-1 px-2">
+                <button disabled className="bg-white md:max-w-[30%] flex-1 text-black uppercase min-h-[50px] rounded text-xs font-bold py-1 px-2">
                   CADASTRAR EMAIL
                 </button>
               </div>
@@ -174,9 +179,7 @@ export default function HomeScreen() {
               </h2>
             </motion.div>
             <div className="flex md:flex-wrap md:flex-row flex-col items-center md:items-stretch justify-between w-full max-w-[1280px]">
-              {Array(3)
-                .fill(0)
-                .map((_, index) => (
+              {fisrtThreeProjects.map((data, index) => (
                   <motion.div
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -190,18 +193,18 @@ export default function HomeScreen() {
                       className="md:min-h-[70vh] mb-4 min-h-[280px] cursor-pointer overflow-hidden group relative md:basis-project-card text-[#fafafa]  md:w-full w-[320px]"
                     >
                       <Link
-                        href={"/projetos/loren-ipson"}
+                        href={`/projetos/${data.slug}`}
                         passHref
                         className="max-w-fit"
                       >
-                        <div className="relative p-5 z-[1]">
+                        <div className="relative p-5 z-[1] bg-black/30 ">
                           <p className="uppercase font-korataki mb-[5px] text-xl">
-                            Projeto STRAUM
+                            {data.title}
                           </p>
-                          <p className="text-xl">Sonda atmosférica</p>
+                          <p className="text-xl">{data.description}</p>
                         </div>
                         <Image
-                          src={"/assets/images/Module_3.jpg"}
+                          src={data.image}
                           alt={"illustriation1_d"}
                           width={1920}
                           height={1080}
@@ -219,7 +222,7 @@ export default function HomeScreen() {
               transition={{ duration: 0.5 }}
             >
               <Link href="/projetos" passHref>
-                <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
+                <button className="px-4 relative group hover:animate-buttonColorMouseIn py-3  text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
                   ver mais
                   <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
                 </button>

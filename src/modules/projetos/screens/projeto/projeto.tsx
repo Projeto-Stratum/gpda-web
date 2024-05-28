@@ -1,10 +1,25 @@
-import { KeyboardArrowDown } from "@styled-icons/material-outlined";
 import Image from "next/image";
-import { ArrowBack } from "@styled-icons/boxicons-regular";
 import { ArrowIosBackOutline } from "@styled-icons/evaicons-outline";
 import Link from "next/link";
+import myData from "@/utils/mockData/projetos.json";
+import { useRouter } from "next/router";
+
 
 export default function ProjetoScreen() {
+  const {data} = myData;
+
+  const router = useRouter();
+  const {slug} = router.query;
+
+  const project = data.find((project) => project.slug === slug);
+
+  if (!project) {
+    router.push("/projetos");
+    return
+  }
+
+
+
   return (
     <>
       <div className=" bg-black flex justify-center min-h-screen w-full pb-20 relative px-12 pt-[90px]">
@@ -21,9 +36,9 @@ export default function ProjetoScreen() {
             </h2>
           </div>
           <div className=" mb-24 min-h-[280px] overflow-hidden relative text-[#fafafa] w-full ">
-            <div className="relative p-5 z-[1] pb-[45%]">
+            <div className="relative p-5 z-[1] pb-[35%]">
               <Image
-                src={"/assets/images/Module_3.jpg"}
+                src={project.image}
                 alt={"illustriation1_d"}
                 width={1920}
                 height={1080}
@@ -35,34 +50,14 @@ export default function ProjetoScreen() {
             </div>
             <div className="relative mt-12 z-[2]">
               <p className="my-3 text-xl uppercase font-korataki">
-                Projeto STRAUM
+                {project.title}
               </p>
-              <p className="text-xl">Sonda atmosférica</p>
+              <p className="text-xl">{project.description}</p>
               <div className="flex flex-col gap-4 mt-10 md:flex-row">
                 <div>
-                  Loren ipson Loren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipson
+                  {project.text}
                 </div>
-                <div>
-                  Loren ipson Loren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipsonLoren ipsonLoren ipsonLoren ipsonLoren
-                  ipsonLoren ipson
-                </div>
+                
               </div>
             </div>
           </div>
