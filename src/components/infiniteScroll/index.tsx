@@ -28,6 +28,9 @@ export default function InfiniteScroll({ items, direction = "left" }) {
                     alt="imagem do membro da equipe"
                     width={300}
                     height={300}
+                    onLoad={(e) => {
+                      e.currentTarget.classList.add("animate-fade-in");
+                    }}
                     className="absolute object-cover w-full h-full"
                   />
                 </div>
