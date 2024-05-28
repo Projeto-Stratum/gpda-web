@@ -15,7 +15,7 @@ export default function ProjetoScreen() {
 
   if (!project) {
     router.push("/projetos");
-    return
+    return <div></div>;
   }
 
 
