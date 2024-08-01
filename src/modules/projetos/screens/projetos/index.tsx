@@ -2,7 +2,6 @@ import HeroPage from "@/components/heroPages";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useGetRocketsSpaceX } from "@/services/noticias";
 import myData from "@/utils/mockData/projetos.json";
 
 export default function ProjetosScreen() {

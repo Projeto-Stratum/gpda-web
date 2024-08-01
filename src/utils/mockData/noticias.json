@@ -1,0 +1,60 @@
+{
+    "data": [
+      {
+        "id": 1,
+        "title": "SEVENTEEN lança videoclipe de 'God of Music' com microfone flutuando no espaço",
+        "slug": "seventeen-god-of-music",
+        "description": "GPDA Cultura",
+        "text": "Em outubro o grupo coreano SEVENTEEN lançou o videoclipe da música 'God of Music' e em uma das cenas um microfone aparece flutuando no céu e logo depois no espaço.\n\nEssa cena é REAL ou foi feita por meio da tecnologia da tela verde?\n\nÉ REAL!\n\nA agência do grupo, PLEDIS Entertainment, em parceria com a empresa SENT INTO SPACE realizaram esse feito. A empresa projetou uma nave espacial e usou hastes discretas de fibra de carbono para prender o microfone. Depois, a nave foi acoplada a um balão de alta altitude cheio de gas hidrogênio mais leve que o ar, e lançada. O microfone subiu cerca de 40km antes de iniciar sua descida de volta à Terra.",
+        "departamento": "Marketing",
+        "image": "/assets/images/kpop-e-engenharia-aeroespacial.jpg",
+        "created_at": "2024-10-01",
+        "updated_at": "2024-10-01"
+      },
+      {
+        "id": 2,
+        "title": "Circuito Elétrico e Software Embarcado no desenvolvimento de payloads",
+        "slug": "circuito-eletrico-software-embarcado",
+        "description": "Inovações tecnológicas na eletrônica",
+        "text": "Circuito Elétrico: Frente do departamento de eletrônica responsável pelo desenvolvimento do circuito que conecta os componentes eletrônicos da payload. Nos sistemas eletrônicos estão componentes como microcontroladores sensores e módulos de comunicação.\n\nSoftware Embarcado: Frente do departamento de eletrônica responsável pela programação dos microcontroladores. A programação é escrita para o framework Arduino que suporta uma variante da linguagem C++.\n\nComunicação por Radiofrequência: Frente do departamento de eletrônica responsável pelo desenvolvimento de antenas. Um Vector Network Analyzer (VNA) é largamente utilizado para a calibração da antena.",
+        "departamento": "Pesquisa",
+        "image": "/assets/images/circuito-eletrico.jpg",
+        "created_at": "2024-06-01",
+        "updated_at": "2024-06-01"
+      },
+      {
+        "id": 3,
+        "title": "GPDA INDICA: Planetário do Ibirapuera",
+        "slug": "gpda-indica-planetario-ibirapuera",
+        "description": "Uma viagem pelo espaço",
+        "text": "Localizado no Parque Ibirapuera o planetário conta com três programações mas a recomendação de hoje é a 'Olhar o céu de São Paulo outra vez'. Nela o público pode observar o céu de São Paulo no passado e no presente sem a interferência da poluição luminosa. Além disso é possível conhecer um pouco da história do Planetário Ibirapuera.\n\nAs sessões não possuem datas e horários fixos mas acessando o link do instagram @ibirapueraplanetario é possível ver quando elas ocorrem.\n\nEm relação ao preço a meia-entrada é 15 reais mas as vezes ocorrem eventos gratuitos.",
+        "departamento": "Cultura",
+        "image": "/assets/images/planetario-ibirapuera.jpg",
+        "created_at": "2024-07-10",
+        "updated_at": "2024-07-10"
+      },
+      {
+        "id": 4,
+        "title": "Composição e Funcionalidade do Stratum",
+        "slug": "composicao-funcionalidade-stratum",
+        "description": "Tecnologia e Estrutura",
+        "text": "O Stratum é primariamente composto por: balão de látex natural modelo Kaymont Hab-100, com o peso de 100 gramas; o paraquedas, que será aberto para o retorno seguro da payload; o refletor de radar, para sinalização eletromagnética; o aro separador, responsável pela organização dos cabos estruturais; e, por fim, a payload, que abrigará toda sua eletrônica.\n\nEnvolvendo diretamente a eletrônica, a coleta dos dados de altitude, que, além de essenciais para telemetria, será vital para a ativação do sistema de encerramento, que ocorrerá pelo acionamento de um módulo relé baseado em sua altitude, soltando o balão do resto da estrutura.\n\nAlém disso, um módulo de relógio registra o horário preciso da coleta de dados, enquanto um módulo de SD Card armazena todas as informações coletadas, facilitando análises posteriores.\n\nApós o estouro do balão, em altitude de aproximadamente 3 km, a queda será conduzida com a abertura de um paraquedas, de modo que não apresente risco para o pouso. O voo do balão será executado em um único dia, preferencialmente a garantir a flexibilidade frente a previsão meteorológica das datas requeridas.",
+        "departamento": "Tecnologia",
+        "image": "/assets/images/stratum.jpg",
+        "created_at": "2024-06-01",
+        "updated_at": "2024-06-01"
+      },
+      {
+        "id": 5,
+        "title": "Desenvolvimento de Payloads para Balões de Pesquisa",
+        "slug": "desenvolvimento-payloads-baloes-pesquisa",
+        "description": "Pesquisa e Inovação",
+        "text": "A payload (carga paga) é o módulo experimental de um balão de pesquisa, que se encarregará de levar os equipamentos eletrônicos para coleta de dados da atmosfera durante a missão.\n\nAs estruturas modeladas foram impressas com filamento de PLA (poliácido láctico), que é um polímero termoplástico feito com ácido lático a partir de matérias-primas que têm fontes renováveis.\n\nA payload é composta, principalmente, por um microcontrolador, diversos sensores, um sistema de comunicação e a bateria.\n\nA estrutura interna composta por colunas, plataformas e um suporte para o circuito foi modelada e impressa de tal forma a fixar os componentes eletrônicos.\n\nNa estrutura interna, uma das plataformas é dedicada ao suporte da bateria, e outra, ao suporte do circuito elétrico. Dois componentes deverão ficar expostos, o módulo de comunicação e o sensor de temperatura externa.",
+        "departamento": "Pesquisa",
+        "image": "/assets/images/desenvolvimento-payloads.jpg",
+        "created_at": "2024-06-01",
+        "updated_at": "2024-06-01"
+      }
+    ]
+  }
+  

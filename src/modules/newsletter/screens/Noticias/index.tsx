@@ -2,16 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import HeroPage from "@/components/heroPages";
-import {
-  useGetNoticiasSpaceX,
-  useGetShips,
-} from "../../../../services/noticias";
-import { formatToDate } from "brazilian-values";
-import { useEffect } from "react";
+import myData from "@/utils/mockData/noticias.json";
 
 export default function NewsLetterScreen() {
-  const { data, isLoading } = useGetShips();
-
+  const { data } = myData;
+  const isLoading = false;
   console.log(data);
 
   return (
@@ -27,11 +22,11 @@ export default function NewsLetterScreen() {
               data &&
               data.map((noticia) => (
                 <div
-                  key={noticia.ship_id}
+                  key={noticia.id}
                   className=" mb-24 min-h-[280px]   relative  text-[#fafafa] w-full md:basis-project-card-half"
                 >
                   <div className="relative cursor-pointer p-5 z-[1] pb-[65%]">
-                    <Link href={"/noticias/loren-ipson"}>
+                    <Link href={`/noticias/${noticia.slug}`}>
                       {noticia.image ? (
                         <Image
                           src={noticia?.image}
@@ -60,9 +55,9 @@ export default function NewsLetterScreen() {
                     </Link>
                   </div>
                   <div className="relative mt-12 z-[2]">
-                    <p className="text-xl opacity-80">{noticia.home_port}</p>
-                    <p className="mt-3 text-xl uppercase font-korataki">
-                      {noticia.ship_name}
+                    <p className="text-xl opacity-80">{noticia.description}</p>
+                    <p className="mt-3 text-xl uppercase break-words font-korataki">
+                      {noticia.title}
                     </p>
                     <motion.div
                       initial={{ opacity: 0, y: 100 }}
@@ -71,7 +66,7 @@ export default function NewsLetterScreen() {
                       transition={{ duration: 0.3 }}
                     >
                       <Link
-                        href={"/noticias/loren-ipson"}
+                        href={`/noticias/${noticia.slug}`}
                         passHref
                         className="max-w-fit"
                       >
