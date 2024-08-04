@@ -13,7 +13,7 @@ export default function TeamAvaliationScreen() {
   const router = useRouter();
   const { slug } = router.query;
   const title = slug && typeof slug === 'string' && slug.replace("-", " ");
-  const { register, handleSubmit, formState: { errors, isSubmitted, isValid } } = useForm<any>();
+  const { register, handleSubmit, formState: { errors, isSubmitted, isValid, isSubmitting } } = useForm<any>();
 
   const [selectedValues, setSelectedValues] = useState({});
 
@@ -89,7 +89,7 @@ export default function TeamAvaliationScreen() {
             {renderSection("Solução", solucao, "q2")}
             {renderSection("Apresentação", apresentacao, "q3")}
             <div className="flex justify-center w-full">
-              <button type="submit" className="px-4 relative group hover:animate-buttonColorMouseIn py-3 text-white text-sm font-bold w-full md:w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
+              <button disabled={isSubmitting} type="submit" className="px-4 relative group hover:animate-buttonColorMouseIn py-3 text-white text-sm font-bold w-full md:w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
                 {isLoadingCreate ? `Carregando` : `Enviar avaliação`}
                 <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
               </button>
