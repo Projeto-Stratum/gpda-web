@@ -29,7 +29,7 @@ export default function TeamsScreen() {
                   className=" mb-24 min-h-[280px]   relative  text-[#fafafa] w-full md:basis-project-card-half"
                 >
                   <div className="relative cursor-pointer p-5 z-[1] pb-[65%]">
-                    <Link href={`/engenharia-do-futuro/avaliacao/${noticia.title}`}>
+                    <Link href={`/engenharia-do-futuro/avaliacao/${noticia.title.replace(/\s/g, "-")}`}>
                       {false ? (
                         <Image
                           src={'noticia?.image'}
@@ -68,7 +68,7 @@ export default function TeamsScreen() {
                       transition={{ duration: 0.3 }}
                     >
                       <Link
-                        href={`/engenharia-do-futuro/avaliacao/${noticia.title}`}
+                        href={`/engenharia-do-futuro/avaliacao/${noticia.title.replace(/\s/g, "-")}`}
                         passHref
                         className="max-w-fit"
                       >
