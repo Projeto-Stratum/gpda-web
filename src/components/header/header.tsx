@@ -40,16 +40,16 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed px-4 top-0 right-0 left-0 z-[60] ">
+      <header className="fixed top-0 left-0 right-0 z-10 px-4 ">
         <div
           className={`${
             isScrollBase &&
             isScrolledDown &&
             "text-opacity-0 text-transparent stroke-transparent invisible opacity-0"
-          }  relative text-gray-200 z-50 flex items-center transition-all duration-500 justify-center w-full h-16 px-8 text-sm md:h-24 `}
+          }  relative text-gray-200 z-10 flex items-center transition-all duration-500 justify-center w-full h-16 px-8 text-sm md:h-24 `}
         >
           <div className="grid items-center justify-between min-w-full grid-cols-3 md:grid-cols-3">
-            <div className="fixed top-[16px] max-h-[36px] !z-[9999] items-center h-full mt-2 md:hidden">
+            <div className="fixed top-[16px] max-h-[36px] !z-20 items-center h-full mt-2 md:hidden">
               <MenuToggle onClick={() => handlerMenu()}>
                 <MenuToggleSpan
                   isScrolledDown={isScrollBase && isScrolledDown}

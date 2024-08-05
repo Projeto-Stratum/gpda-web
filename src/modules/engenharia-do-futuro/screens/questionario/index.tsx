@@ -2,36 +2,49 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import myData from "@/utils/mockData/questionario.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { EmojiFrown, EmojiNeutral, EmojiSmile, EmojiLaughing, EmojiHeartEyes } from "@styled-icons/bootstrap";
 import { usePostVote } from "@/services/eng-futuro";
 import { QuestaoType, QuestionarioPayload } from "@/entities/questionario";
+import { toaster } from "evergreen-ui";
 
 
 export default function TeamAvaliationScreen() {
   const { dor, solucao, apresentacao } = myData;
   const router = useRouter();
-  const { slug } = router.query;
+  const { slug, id } = router.query;
   const title = slug && typeof slug === 'string' && slug.replace("-", " ");
   const { register, handleSubmit, formState: { errors, isSubmitted, isValid, isSubmitting } } = useForm<any>();
-
   const [selectedValues, setSelectedValues] = useState({});
+  
+  const { mutate: create, isLoading: isLoadingCreate } = usePostVote({
+    onSuccess: async () => {
+      toaster.success('Your source is now sending data')
+      router.push(`/engenharia-do-futuro/avaliacao`);
+    },
+    onError: (error) => {
+      if (error.response?.data) {
+        toaster.danger("Erro ao enviar avaliação", {
+          duration: 10,
+          description: error.response?.data,
+        });
+        return;
+      };
+
+      toaster.danger("Erro ao enviar avaliação", {
+        duration: 10,
+      });
+    },
+  });
+
 
   const onSubmit = (data: QuestionarioPayload) => {
+    if (!id || typeof id !== 'string') return;
+    
     data.name = 'luis felipe'
-    const id = "2";
-    console.log(data);
     create({data, id});
   };
 
-  const { mutate: create, isLoading: isLoadingCreate } = usePostVote({
-    onSuccess: async () => {
-      router.push(`/engenharia-do-futuro/avaliacao`);
-    },
-    onError: () => {
-      alert("Erro ao enviar avaliação");
-    },
-  });
 
   const handleSelection = (sectionName: string, index: number, value: string) => {
     setSelectedValues(prev => ({ ...prev, [`${sectionName}_${index}`]: value }));

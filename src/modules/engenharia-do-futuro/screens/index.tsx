@@ -3,12 +3,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import HeroPage from "@/components/heroPages";
 import myData from "@/utils/mockData/times.json";
+import { useListTeams } from "@/services/eng-futuro";
 
 export default function TeamsScreen() {
-  const { data } = myData;
-  const isLoading = false;
-  console.log(data);
 
+  const {data, isLoading } = useListTeams();
+  console.log(data);  
   return (
     <>
       <HeroPage
@@ -23,16 +23,16 @@ export default function TeamsScreen() {
           <div className="flex flex-wrap justify-start w-full max-w-[1680px] gap-5">
             {!isLoading &&
               data &&
-              data.map((noticia) => (
+              data.map((time) => (
                 <div
-                  key={noticia.id}
+                  key={time.team_id}
                   className=" mb-24 min-h-[280px]   relative  text-[#fafafa] w-full md:basis-project-card-half"
                 >
                   <div className="relative cursor-pointer p-5 z-[1] pb-[65%]">
-                    <Link href={`/engenharia-do-futuro/avaliacao/${noticia.title.replace(/\s/g, "-")}`}>
+                    <Link href={`/engenharia-do-futuro/avaliacao/${time.team_name.replace(/\s/g, "-")}?id=${time.team_id}`}>
                       {false ? (
                         <Image
-                          src={'noticia?.image'}
+                          src={'time?.image'}
                           alt={"illustriation1_d"}
                           width={1920}
                           loading="lazy"
@@ -59,7 +59,7 @@ export default function TeamsScreen() {
                   </div>
                   <div className="relative mt-12 z-[2]">
                     <p className="mt-3 text-xl uppercase font-korataki">
-                      {noticia.title}
+                      {time.team_name}
                     </p>
                     <motion.div
                       initial={{ opacity: 0, y: 100 }}
@@ -68,7 +68,7 @@ export default function TeamsScreen() {
                       transition={{ duration: 0.3 }}
                     >
                       <Link
-                        href={`/engenharia-do-futuro/avaliacao/${noticia.title.replace(/\s/g, "-")}`}
+                        href={`/engenharia-do-futuro/avaliacao/${time.team_name.replace(/\s/g, "-")}?id=${time.team_id}`}
                         passHref
                         className="max-w-fit"
                       >
