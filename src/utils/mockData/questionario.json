@@ -1,0 +1,44 @@
+{
+  "dor": [
+    {
+      "pergunta": "A explicação da dor foi fundamentada com dados ou evidências?",
+      "id": "q1_1"
+    },
+    {
+      "pergunta": "A dor foi contextualizada dentro do cenário atual ou histórico?",
+      "id": "q1_2"
+    },
+    {
+      "pergunta": "A dor apresentada tem um impacto significativo em uma comunidade ou grupo específico?",
+      "id": "q1_3"
+    }
+  ],
+  "solucao": [
+    {
+      "pergunta": "A solução foi demonstrada de forma prática ou teórica?",
+      "id": "q2_1"
+    },
+    {
+      "pergunta": "A solução foi validada por meio de testes ou estudos preliminares?",
+      "id": "q2_2"
+    },
+    {
+      "pergunta": "A solução tem embasamento em dados e fontes confiáveis?",
+      "id": "q2_3"
+    }
+  ],
+  "apresentacao": [
+    {
+      "pergunta": "A narrativa incluiu casos de uso ou histórias de sucesso relevantes?",
+      "id": "q3_1"
+    },
+    {
+      "pergunta": "Os apresentadores demonstraram conhecer bem a dor e sua solução?",
+      "id": "q3_2"
+    },
+    {
+      "pergunta": "A apresentação foi clara e direta?",
+      "id": "q3_3"
+    }
+  ]
+}

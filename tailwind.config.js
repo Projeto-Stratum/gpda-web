@@ -16,6 +16,9 @@ module.exports = {
       maxWidth: {
         "content-wrapper-max": "1200px",
       },
+      padding: {
+        "padding-page": "96px 0 0 0",
+      },
       fontFamily: {
         Jost: ["Jost", "sans-serif"],
         Oswald: ["Oswald", "sans-serif"],
@@ -24,6 +27,9 @@ module.exports = {
       colors: {
         primary: "#EDC065",
         secundary: "#3e3e3e",
+      },
+      transitionTimingFunction: {
+        "custom-bezier": "cubic-bezier(.25, 1, .25, 1)", // Define a curva de Bezier personalizada
       },
       gridTemplateColumns: {
         "auto-1818px": "repeat(auto-fill,minmax(max(320px,20% - 32px),1fr))",
@@ -36,6 +42,15 @@ module.exports = {
         "height-in": "height-in 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
         "height-out": "height-out 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
         "fade-in": "fade-in 700ms ease-in forwards",
+        overlayMouseIn: "overlayMouseIn 300ms ease-out 1",
+        overlayMouseOut: "overlayMouseOut 300ms ease-out 1",
+        buttonColorMouseIn: "buttonColorMouseIn 300ms ease-out 1",
+        buttonColorMouseOut: "buttonColorMouseOut 300ms ease-out 1",
+        translateDownUpY: "translateUpY 2s ease-out forwards",
+        translateUpDownY: "translateDownY 2s ease-out forwards",
+        opacityOut: "opacityOut 400ms ease-out forwards 2s",
+        "infinite-left-scroll": "infinite-left-scroll 55s linear infinite",
+        "infinite-right-scroll": "infinite-right-scroll 55s linear infinite",
       },
       keyframes: {
         "height-in": {
@@ -62,6 +77,115 @@ module.exports = {
             opacity: "1",
           },
         },
+        overlayMouseIn: {
+          "0%": {
+            bottom: "-100%",
+          },
+          "50%": {
+            bottom: "0%",
+          },
+          "51%": {
+            bottom: "0%",
+          },
+          "100%": {
+            bottom: "-100%",
+          },
+        },
+        overlayMouseOut: {
+          "0%": {
+            bottom: "-100%",
+          },
+          "50%": {
+            bottom: "0%",
+          },
+          "51%": {
+            bottom: "0%",
+          },
+          "100%": {
+            bottom: "-100%",
+          },
+        },
+        buttonColorMouseIn: {
+          "0%": {
+            backgroundColor: "transparent",
+          },
+          "50%": {
+            backgroundColor: "transparent",
+          },
+          "51%": {
+            backgroundColor: "white",
+          },
+          "100%": {
+            backgroundColor: "white",
+          },
+        },
+        buttonColorMouseOut: {
+          "0%": {
+            backgroundColor: "white",
+          },
+          "50%": {
+            backgroundColor: "white",
+          },
+          "51%": {
+            backgroundColor: "transparent",
+          },
+          "100%": {
+            backgroundColor: "transparent",
+          },
+        },
+        translateUpY: {
+          "0%": {
+            transform: "translateY(100%)",
+            opacity: "0",
+          },
+          "25%": {
+            transform: "translateY(0%)",
+            opacity: "1",
+          },
+          "75%": {
+            transform: "translateY(0%)",
+          },
+          "100%": {
+            transform: "translateY(100%)",
+          },
+        },
+        translateDownY: {
+          "0%": {
+            transform: "translateY(-100%)",
+            opacity: "0",
+          },
+          "25%": {
+            transform: "translateY(0%)",
+            opacity: "1",
+          },
+          "75%": {
+            transform: "translateY(0%)",
+          },
+          "100%": {
+            transform: "translateY(-100%)",
+          },
+        },
+        "infinite-left-scroll": {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        "infinite-right-scroll": {
+          from: { transform: "translateX(-100%)" },
+          to: { transform: "translateX(0)" },
+        },
+        opacityOut: {
+          "0%": {
+            opacity: "1",
+          },
+          "100%": {
+            opacity: "0",
+            transform: "translateY(-100%)",
+          },
+        },
+      },
+      flexBasis: {
+        "project-card": "calc(100%/3 - 10px)",
+        "project-card-half": "calc(50% - 10px);",
       },
     },
   },

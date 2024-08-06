@@ -27,6 +27,14 @@ export default function App({ Component, pageProps }: AppProps) {
           href="/assets/images/gpda-logo.svg"
           type="image/x-icon"
         />
+        <meta
+          name="Description"
+          content="O GPDA é uma entidade de pesquisa do setor aeroespacial criada em 2009, vinculada a quatro entidades estudantis da área aeroespacial: Harpia Aerodesign, Colibri, Sirius e Rocket Design"
+        />
+        <meta
+          name="Keywords"
+          content="GPDA GRUPO DE PESQUISA E DENSENVOLVIMENTO AEROESPACIAL UFABC"
+        />
       </Head>
       <Default>
         <Component {...pageProps} />

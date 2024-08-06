@@ -1,0 +1,85 @@
+{
+    "type": "inscritos",
+    "data": [
+        {
+            "id": 1,
+            "title": "Rocket",
+            "inscritos": 35
+        },
+        {
+            "id": 2,
+            "title": "IEEE AESS",
+            "inscritos": 11
+        },
+        {
+            "id": 3,
+            "title": "Outros",
+            "inscritos": 2
+        },
+        {
+            "id": 4,
+            "title": "Baja Quero Quero",
+            "inscritos": 15
+        },
+        {
+            "id": 5,
+            "title": "Challenger",
+            "inscritos": 12
+        },
+        {
+            "id": 6,
+            "title": "Concreto Poli",
+            "inscritos": 16
+        },
+        {
+            "id": 7,
+            "title": "Scuderia",
+            "inscritos": 20
+        },
+        {
+            "id": 8,
+            "title": "Green Team Hacker Club (GTHC)",
+            "inscritos": 1
+        },
+        {
+            "id": 9,
+            "title": "Harpia Aerodesign",
+            "inscritos": 21
+        },
+        {
+            "id": 10,
+            "title": "Ras e WIEE",
+            "inscritos": 5
+        },
+        {
+            "id": 11,
+            "title": "Mack concreto",
+            "inscritos": 12
+        },
+        {
+            "id": 12,
+            "title": "Neon",
+            "inscritos": 20
+        },
+        {
+            "id": 13,
+            "title": "Poli Cerevisiae",
+            "inscritos": 14
+        },
+        {
+            "id": 14,
+            "title": "Sirius",
+            "inscritos": 8
+        },
+        {
+            "id": 15,
+            "title": "Skyrats",
+            "inscritos": 17
+        },
+        {
+            "id": 16,
+            "title": "AgroUSP",
+            "inscritos": 0
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "type": "projects",
+    "data": [
+        {
+            "id": 1,
+            "title": "Pesquisa",
+            "slug": "pesquisa-projeto",
+            "description": "Um departamento teórico do GPDA",
+            "text": "O departamento de Pesquisa do Grupo de Pesquisa e Desenvolvimento Aeroespacial (GPDA) é um setor central na promoção de atividades científicas e tecnológicas dentro do curso de engenharia aeroespacial da UFABC. Com uma estrutura organizada e metodológica, o departamento executa uma série de ações que abrangem desde a coleta de dados da instituição até a implementação de projetos inovadores, bem como o auxílio às pesquisas científicas realizadas por discentes da área de estudo da engenharia aeroespacial da UFABC.",
+            "departamento": "Pesquisa",
+            "image": "/assets/images/pesquisa.jpg",
+            "created_at": "2019-01-01",
+            "updated_at": "2019-01-01"
+        },
+        {
+            "id": 2,
+            "title": "NIX-Bee I",
+            "slug": "nix-bee-i",
+            "description": "Projeto de um drone do GPDA",
+            "text": "O Projeto NIX-Bee I é uma iniciativa acadêmica centrada na construção de um drone de pequeno porte com enfoque no desenvolvimento de uma tecnologia nacional neste ramo. O projeto integra diversas áreas do conhecimento e proporciona o aperfeiçoamento de habilidades técnicas e humanas requisitadas nos ambientes acadêmico e profissional.",
+            "departamento": "Pesquisa",
+            "image": "/assets/images/rideshare_feature.jpg",
+            "created_at": "2019-01-01",
+            "updated_at": "2019-01-01"
+        },
+        {
+            "id": 3,
+            "title": "Setor de Eletrônica",
+            "slug": "setor-de-eletronica",
+            "description": "Setor de Eletrônica do Projeto STRATUM",
+            "text": "O Setor de Eletrônica assume a responsabilidade pela programação e desenvolvimento dos sistemas a serem incorporados na sonda do Projeto STRATUM. Esta incumbência visa assegurar a funcionalidade dos sensores e componentes eletrônicos, bem como a transmissão eficiente de dados ao longo da missão. A equipe, encarregada da concepção do circuito eletrônico, elaborou a placa de circuito com todos os componentes integrados, realizando também os testes necessários com cada sensor para garantir a segurança dos dados a serem coletados no lançamento. A mesma assumiu a responsabilidade pela programação do STRATUM, assegurando a geração e o armazenamento eficiente dos dados para análise posterior. Ainda, os membros foram responsáveis pelo aprofundamento teórico e pela fabricação e posicionamento das antenas transmissoras e receptoras, assegurando a transmissão eficaz dos dados relevantes para o projeto.",
+            "departamento": "Projetos",
+            "image": "/assets/images/eletronica.jpg",
+            "created_at": "2019-01-01",
+            "updated_at": "2019-01-01"
+        }
+    ]
+}   

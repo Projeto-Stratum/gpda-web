@@ -40,16 +40,16 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed px-4 top-0 right-0 left-0 z-[60] ">
+      <header className="fixed top-0 left-0 right-0 z-10 px-4 ">
         <div
           className={`${
             isScrollBase &&
             isScrolledDown &&
-            "text-opacity-0 text-transparent stroke-transparent invisible"
-          }  relative text-gray-200 z-50 flex items-center transition-all duration-300 justify-center w-full h-16 px-8 text-sm md:h-24 md:px-20`}
+            "text-opacity-0 text-transparent stroke-transparent invisible opacity-0"
+          }  relative text-gray-200 z-10 flex items-center transition-all duration-500 justify-center w-full h-16 px-8 text-sm md:h-24 `}
         >
           <div className="grid items-center justify-between min-w-full grid-cols-3 md:grid-cols-3">
-            <div className="fixed top-[16px] max-h-[36px] !z-[9999] items-center h-full mt-2 md:hidden">
+            <div className="fixed top-[16px] max-h-[36px] !z-20 items-center h-full mt-2 md:hidden">
               <MenuToggle onClick={() => handlerMenu()}>
                 <MenuToggleSpan
                   isScrolledDown={isScrollBase && isScrolledDown}
@@ -73,33 +73,35 @@ export default function Header() {
                     alt="logo GPDA"
                     src="/assets/images/gpda-logo.svg"
                     width={56}
-                    className={`transition-all duration-300 ${
-                      isScrollBase && isScrolledDown && "opacity-0"
-                    }`}
                     height={56}
                   />
-                  <div className="md:flex hidden justify-center text-2xl font-medium !font-korataki">
+                  <div className="md:flex hidden text-white justify-center text-2xl font-medium !font-korataki">
                     GPDA
                   </div>
                 </div>
               </Link>
             </div>
 
-            <nav className="justify-center hidden text-sm uppercase md:text-base 0 md:flex">
+            <nav className="justify-center hidden text-sm font-medium text-white uppercase md:text-base md:flex">
               <ul className="flex space-x-5">
                 <li>
                   <Link href={"/"}>
-                    <span className="duration-300 ">Home</span>
+                    <span className="">Início</span>
                   </Link>
                 </li>
                 <li>
-                  <Link href={"/explore"}>
-                    <span className="duration-300 ">Explore</span>
+                  <Link href={"/projetos"}>
+                    <span className="">projetos</span>
                   </Link>
                 </li>
                 <li>
-                  <Link target="_blanck" href={"/prestador/login"}>
-                    <span className="duration-300 ">NewsLetter</span>
+                  <Link href={"/noticias"}>
+                    <span className="">Notícias</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={"/sobre"}>
+                    <span className="">Sobre</span>
                   </Link>
                 </li>
               </ul>
@@ -108,7 +110,7 @@ export default function Header() {
               <div>
                 <span
                   aria-label="incoming"
-                  className="text-base uppercase duration-300 cursor-default opacity-70"
+                  className="text-base uppercase cursor-default opacity-70"
                 >
                   Loja
                 </span>

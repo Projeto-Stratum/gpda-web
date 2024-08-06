@@ -1,0 +1,137 @@
+{
+    "data": [
+        {
+            "name": "Lyncoln Ferreira",
+            "cargo": "presidente",
+            "area": "",
+            "tier": 1,
+            "image": "/assets/images/time/IMG_20220218_015932_349 - Lyncoln Ferreira.jpg"
+        },
+        {
+            "name": "Ingrid Brittes",
+            "cargo": "Vice-Presidente",
+            "tier": 1,
+            "area": "",
+            "image": "/assets/images/time/17125992907171997174822860772064 - Ingrid Brittes.jpg"
+        },
+        {
+            "name": "Laura Eduarda",
+            "cargo": "coordenadora",
+            "tier": 2,
+            "area": "estruturas & projetos",
+            "image": "/assets/images/time/Picsart_24-04-13_11-09-31-608 - Laura Eduarda.jpg"
+        },
+        {
+            "name": "Leiliane Souza",
+            "cargo": "time",
+            "tier": 3,
+            "area": "estruturas",
+            "image": "/assets/images/time/IMG_20240426_221206538 - Leiliane Souza.jpg"
+        },
+        {
+            "name": "Jade",
+            "cargo": "time",
+            "tier": 3,
+            "area": "estruturas",
+            "image": "/assets/images/time/IMG_20230324_123534 - Jade.jpg"
+        },
+        {
+            "name": "Matheus Alves",
+            "cargo": "coordenador",
+            "tier": 2,
+            "area": "eletrônica",
+            "image": "/assets/images/time/IMG-20240321-WA0058 - Matheus Alves.jpg"
+        },
+        {
+            "name": "Gabriel Tsutomu",
+            "cargo": "time",
+            "tier": 3,
+            "area": "eletrônica e marketing",
+            "image": "/assets/images/time/Picsart_24-02-24_08-39-15-091~2 - Gabriel Tsutomu.jpg"
+        },
+        {
+            "name": "Caio Silva",
+            "cargo": "time",
+            "tier": 3,
+            "area": "eletrônica",
+            "image": "/assets/images/time/IMG_6773 - Caio Silva.jpeg"
+        },
+        {
+            "name": "Murilo",
+            "cargo": "time",
+            "tier": 3,
+            "area": "eletrônica",
+            "image": "/assets/images/time/murilo.jpg"
+        },
+        {
+            "name": "André",
+            "cargo": "coordenador",
+            "tier": 2,
+            "area": "pesquisa",
+            "image": "/assets/images/time/andre.jpg"
+        },
+        {
+            "name": "Dyeisi Kelle",
+            "cargo": "time",
+            "tier": 3,
+            "area": "pesquisa",
+            "image": "/assets/images/time/IMG_20220908_175026_674 - Dyeisi Kelle.jpg"
+        },
+        {
+            "name": "Gean de Araújo",
+            "cargo": "time",
+            "tier": 3,
+            "area": "pesquisa",
+            "image": "/assets/images/time/IMG_7701_Original - Gean de Araújo.jpeg"
+        },
+        {
+            "name": "Giovana Ribeiro",
+            "cargo": "coordenadora",
+            "tier": 2,
+            "area": "marketing",
+            "image": "/assets/images/time/WhatsApp Image 2024-04-25 at 23.44.17 - Giovana Ribeiro.jpeg"
+        },
+        {
+            "name": "Marcelo Henrique",
+            "cargo": "time",
+            "tier": 3,
+            "area": "marketing",
+            "image": "/assets/images/time/gpda picture - Marcelo Henrique.jpg"
+        },
+        {
+            "name": "João Pedro Gonçalves",
+            "cargo": "time",
+            "tier": 3,
+            "area": "marketing",
+            "image": "/assets/images/time/17157330377367749500166932384384 - João Pedro Gonçalves.jpg"
+        },
+        {
+            "name": "Cauli Vilela",
+            "cargo": "coordenador",
+            "tier": 2,
+            "area": "tecnologia",
+            "image": "/assets/images/time/IMG_4839 - C. Vilela.jpeg"
+        },
+        {
+            "name": "Nicolas Greco",
+            "cargo": "time",
+            "tier": 3,
+            "area": "tecnologia",
+            "image": "/assets/images/time/a77176d7-5b95-4f5b-8e42-a75d1154e10a - Nicolas Greco.jpeg"
+        },
+        {
+            "name": "Guilherme",
+            "cargo": "time",
+            "tier": 3,
+            "area": "tecnologia",
+            "image": "/assets/images/time/20240301_141357 - Alkoarism L..jpg"
+        },
+        {
+            "name": "Lisa",
+            "cargo": "coordenadora",
+            "tier": 2,
+            "area": "financeiro",
+            "image": "/assets/images/time/lisa.jpg"
+        }
+    ]
+}

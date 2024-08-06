@@ -1,5 +1,4 @@
-import { COOKIE_DOMAIN, NODE_ENV } from "@configs/environment";
-
+import { COOKIE_DOMAIN, VERCEL_ENV } from "@configs/environment";
 export { CookieKey } from "./types";
 
 export const readCookie = (name: string, cookies: string): string | null => {
@@ -12,8 +11,8 @@ export const readCookie = (name: string, cookies: string): string | null => {
 export const setCookie = (name: string, value: string) => {
   const expires = new Date();
   expires.setHours(24);
-
-  if (NODE_ENV === `production`) {
+  console.log(COOKIE_DOMAIN ,VERCEL_ENV);
+  if (VERCEL_ENV === `production`) {
     document.cookie = `${name}=${value}; domain=${COOKIE_DOMAIN}; expires=${expires.toUTCString()}; path=/; sameSite=strict; secure;`;
   } else {
     document.cookie = `${name}=${value}; domain=${COOKIE_DOMAIN}; expires=${expires.toUTCString()}; path=/;`;
@@ -21,7 +20,7 @@ export const setCookie = (name: string, value: string) => {
 };
 
 export const removeCookie = (name: string) => {
-  if (NODE_ENV === `production`) {
+  if (VERCEL_ENV === `production`) {
     document.cookie = `${name}=; domain=${COOKIE_DOMAIN}; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; sameSite=strict; secure;`;
   } else {
     document.cookie = `${name}=; domain=${COOKIE_DOMAIN}; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;`;
@@ -31,7 +30,7 @@ export const removeCookie = (name: string) => {
 export const setCookieLong = (name: string, value: string) => {
   const expires = new Date();
   expires.setHours(720);
-  if (NODE_ENV === `production`) {
+  if (VERCEL_ENV === `production`) {
     document.cookie = `${name}=${value}; domain=${COOKIE_DOMAIN}; expires=${expires.toUTCString()}; path=/; sameSite=strict; secure;`;
   } else {
     document.cookie = `${name}=${value}; domain=${COOKIE_DOMAIN}; expires=${expires.toUTCString()}; path=/;`;
@@ -39,7 +38,7 @@ export const setCookieLong = (name: string, value: string) => {
 };
 
 export const setCookieForever = (name: string, value: string) => {
-  if (NODE_ENV === `production`) {
+  if (VERCEL_ENV === `production`) {
     document.cookie = `${name}=${value}; domain=${COOKIE_DOMAIN}; expires=${`Fri, 31 Dec 9999 23:59:59 GMT`}; path=/; sameSite=strict; secure;`;
   } else {
     document.cookie = `${name}=${value}; domain=${COOKIE_DOMAIN}; expires=${`Fri, 31 Dec 9999 23:59:59 GMT`}; path=/;`;
