@@ -7,6 +7,8 @@ import { EmojiFrown, EmojiNeutral, EmojiSmile, EmojiLaughing, EmojiHeartEyes } f
 import { usePostVote } from "@/services/eng-futuro";
 import { QuestaoType, QuestionarioPayload } from "@/entities/questionario";
 import { toaster } from "evergreen-ui";
+import { keyListJudges } from "@/services/eng-futuro/keys";
+import { queryClient } from "@/libs/react-query";
 
 
 export default function TeamAvaliationScreen() {
@@ -20,6 +22,7 @@ export default function TeamAvaliationScreen() {
   const { mutate: create, isLoading: isLoadingCreate } = usePostVote({
     onSuccess: async () => {
       toaster.success('Voto realizado com sucesso')
+      await queryClient.invalidateQueries(keyListJudges());
       router.push(`/engenharia-do-futuro/avaliacao`);
     },
     onError: (error) => {
