@@ -11,7 +11,7 @@ export const readCookie = (name: string, cookies: string): string | null => {
 export const setCookie = (name: string, value: string) => {
   const expires = new Date();
   expires.setHours(24);
-  console.log(COOKIE_DOMAIN ,VERCEL_ENV);
+  
   if (VERCEL_ENV === `production`) {
     document.cookie = `${name}=${value}; domain=${COOKIE_DOMAIN}; expires=${expires.toUTCString()}; path=/; sameSite=strict; secure;`;
   } else {

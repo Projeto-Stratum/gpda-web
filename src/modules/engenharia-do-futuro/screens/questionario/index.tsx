@@ -2,13 +2,13 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import myData from "@/utils/mockData/questionario.json";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { EmojiFrown, EmojiNeutral, EmojiSmile, EmojiLaughing, EmojiHeartEyes } from "@styled-icons/bootstrap";
-import { useListTeams, usePostVote } from "@/services/eng-futuro";
 import { QuestaoType, QuestionarioPayload } from "@/entities/questionario";
 import { toaster } from "evergreen-ui";
-import { keyListJudges, keyListTeams } from "@/services/eng-futuro/keys";
 import { queryClient } from "@/libs/react-query";
+import { keyListJudges } from "@/services/eng-futuro/keys";
+import { useListTeams, usePostVote } from "@/services/eng-futuro";
 
 
 export default function TeamAvaliationScreen() {
@@ -32,6 +32,14 @@ export default function TeamAvaliationScreen() {
           duration: 10,
           description: error.response?.data,
         });
+
+        if (error.response?.data === "Sessão não foi autorizada") {
+          router.push(`/verify-judge`);
+        }
+
+        if (error.response?.data?.includes("já votou")) {
+          router.push(`/engenharia-do-futuro/avaliacao`);
+        }
         return;
       };
 
