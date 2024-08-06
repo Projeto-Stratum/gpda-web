@@ -20,10 +20,12 @@ export default function TeamsScreen() {
     team_1: 0,
     team_2: 0,
   });
+
   const connectId = Cookies.get(CookieKey.UserId);
   const router = useRouter();
 
   useEffect(() => {
+
     if (judges) {
       const judgeData = judges.find(item => item.name === connectId);
       if (!judgeData) return;
@@ -66,6 +68,7 @@ export default function TeamsScreen() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3 }}
+                      className="flex justify-center"
                     >
                       <Link
                         href={`/engenharia-do-futuro/avaliacao/${time.team_name.replace(/\s/g, "-")}?id=${time.team_id}`}

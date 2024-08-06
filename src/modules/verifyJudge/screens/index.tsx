@@ -13,7 +13,6 @@ const VerifyJudgeScreen = () => {
 
   const { mutate, isLoading, isSuccess } = useAuthenticateJudge({
     onSuccess: async (data) => {
-        // setCookie(CookieKey.JwtAuthToken, data.name);
         setCookie(CookieKey.UserId, data.name);
         replace('/engenharia-do-futuro/avaliacao');
     },

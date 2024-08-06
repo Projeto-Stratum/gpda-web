@@ -1,5 +1,4 @@
 import { COOKIE_DOMAIN, NODE_ENV } from "@configs/environment";
-
 export { CookieKey } from "./types";
 
 export const readCookie = (name: string, cookies: string): string | null => {
@@ -12,11 +11,10 @@ export const readCookie = (name: string, cookies: string): string | null => {
 export const setCookie = (name: string, value: string) => {
   const expires = new Date();
   expires.setHours(24);
-
   if (NODE_ENV === `production`) {
     document.cookie = `${name}=${value}; domain=${COOKIE_DOMAIN}; expires=${expires.toUTCString()}; path=/; sameSite=strict; secure;`;
   } else {
-    document.cookie = `${name}=${value}; domain=${COOKIE_DOMAIN}; expires=${expires.toUTCString()}; path=/;`;
+    document.cookie = `${name}=${value}; expires=${expires.toUTCString()}; path=/;`;
   }
 };
 

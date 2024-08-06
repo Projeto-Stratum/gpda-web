@@ -19,7 +19,7 @@ export default function TeamAvaliationScreen() {
   
   const { mutate: create, isLoading: isLoadingCreate } = usePostVote({
     onSuccess: async () => {
-      toaster.success('Your source is now sending data')
+      toaster.success('Voto realizado com sucesso')
       router.push(`/engenharia-do-futuro/avaliacao`);
     },
     onError: (error) => {
