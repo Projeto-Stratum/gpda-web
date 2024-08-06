@@ -32,7 +32,7 @@ export const StyledOverlay = styled.div`
   background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   inset: 0;
-  z-index: 51;
+  z-index: 9;
 
   animation-name: ${(props) =>
     props.disappear ? overlayDisappear : overlayShow};
@@ -56,7 +56,7 @@ export const StyledContent = styled.div`
   background-color: #000;
   color: #fff;
   position: fixed;
-  z-index: 52;
+  z-index: 9;
   padding: 25px 48px;
   top: 0;
   left: 0;

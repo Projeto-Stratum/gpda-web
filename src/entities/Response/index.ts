@@ -1,16 +1,10 @@
 import { AxiosResponse, AxiosError } from "axios";
 
 type RawError = {
-  detail: [
-    {
-      loc: [string, 0];
-      msg: string;
-      type: string;
-    }
-  ];
+  data: string;
 };
 
-export type APIError = AxiosError<RawError>;
+export type APIError = AxiosError<string>;
 
 export type DefaultResponse<Data> = {
   data: Data;

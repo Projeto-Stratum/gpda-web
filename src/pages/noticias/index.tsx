@@ -7,7 +7,7 @@ export default function NewsLetter() {
   return (
     <>
       <Head>
-        <title>GPDA - Newsletter</title>
+        <title>GPDA - Notícias</title>
       </Head>
       <Header />
       <NewsLetterScreen />
