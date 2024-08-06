@@ -4,15 +4,16 @@ import { motion } from "framer-motion";
 import myData from "@/utils/mockData/questionario.json";
 import { useEffect, useState } from "react";
 import { EmojiFrown, EmojiNeutral, EmojiSmile, EmojiLaughing, EmojiHeartEyes } from "@styled-icons/bootstrap";
-import { usePostVote } from "@/services/eng-futuro";
+import { useListTeams, usePostVote } from "@/services/eng-futuro";
 import { QuestaoType, QuestionarioPayload } from "@/entities/questionario";
 import { toaster } from "evergreen-ui";
-import { keyListJudges } from "@/services/eng-futuro/keys";
+import { keyListJudges, keyListTeams } from "@/services/eng-futuro/keys";
 import { queryClient } from "@/libs/react-query";
 
 
 export default function TeamAvaliationScreen() {
   const { dor, solucao, apresentacao } = myData;
+  const {data, isLoading } = useListTeams();
   const router = useRouter();
   const { slug, id } = router.query;
   const title = slug && typeof slug === 'string' && slug.replace("-", " ");
@@ -22,7 +23,9 @@ export default function TeamAvaliationScreen() {
   const { mutate: create, isLoading: isLoadingCreate } = usePostVote({
     onSuccess: async () => {
       toaster.success('Voto realizado com sucesso')
-      await queryClient.invalidateQueries(keyListJudges());
+      console.log('Invalidating queries for key:', keyListJudges())
+      console.log('Invalidating queries for key:', keyListJudges())
+      queryClient.invalidateQueries(keyListJudges());
       router.push(`/engenharia-do-futuro/avaliacao`);
     },
     onError: (error) => {

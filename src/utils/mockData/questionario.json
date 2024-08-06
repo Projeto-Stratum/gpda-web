@@ -9,100 +9,36 @@
       "id": "q1_2"
     },
     {
-      "pergunta": "A dor foi apresentada de forma a criar empatia com o público?",
-      "id": "q1_3"
-    },
-    {
-      "pergunta": "A importância da dor foi justificada com exemplos concretos?",
-      "id": "q1_4"
-    },
-    {
       "pergunta": "A dor apresentada tem um impacto significativo em uma comunidade ou grupo específico?",
-      "id": "q1_5"
-    },
-    {
-      "pergunta": "A dor foi bem explicada?",
-      "id": "q1_6"
-    },
-    {
-      "pergunta": "A dor é relevante para a sociedade?",
-      "id": "q1_7"
+      "id": "q1_3"
     }
   ],
   "solucao": [
     {
-      "pergunta": "A solução é inovadora em comparação com alternativas existentes?",
+      "pergunta": "A solução foi demonstrada de forma prática ou teórica?",
       "id": "q2_1"
     },
     {
-      "pergunta": "A solução foi demonstrada de forma prática ou teórica?",
+      "pergunta": "A solução foi validada por meio de testes ou estudos preliminares?",
       "id": "q2_2"
     },
     {
-      "pergunta": "A solução foi detalhada suficientemente para que se entenda sua implementação?",
-      "id": "q2_3"
-    },
-    {
-      "pergunta": "A solução considera possíveis obstáculos ou desafios na implementação?",
-      "id": "q2_4"
-    },
-    {
-      "pergunta": "A solução foi validada por meio de testes ou estudos preliminares?",
-      "id": "q2_5"
-    },
-    {
       "pergunta": "A solução tem embasamento em dados e fontes confiáveis?",
-      "id": "q2_6"
-    },
-    {
-      "pergunta": "A solução é viável?",
-      "id": "q2_7"
-    },
-    {
-      "pergunta": "A solução foi apresentada de forma clara?",
-      "id": "q2_8"
+      "id": "q2_3"
     }
   ],
   "apresentacao": [
     {
-      "pergunta": "O visual da apresentação foi atrativo e facilitou o entendimento?",
+      "pergunta": "A narrativa incluiu casos de uso ou histórias de sucesso relevantes?",
       "id": "q3_1"
     },
     {
-      "pergunta": "A apresentação respeitou o tempo previsto?",
+      "pergunta": "Os apresentadores demonstraram conhecer bem a dor e sua solução?",
       "id": "q3_2"
     },
     {
-      "pergunta": "Os apresentadores usaram recursos audiovisuais de forma eficaz?",
-      "id": "q3_3"
-    },
-    {
-      "pergunta": "Os apresentadores interagiram bem com a audiência, respondendo perguntas ou dúvidas?",
-      "id": "q3_4"
-    },
-    {
-      "pergunta": "A linguagem utilizada foi apropriada para o público-alvo?",
-      "id": "q3_5"
-    },
-    {
-      "pergunta": "Houve um resumo ou conclusão eficaz ao final da apresentação?",
-      "id": "q3_6"
-    },
-    {
-      "pergunta": "A narrativa incluiu casos de uso ou histórias de sucesso relevantes?",
-      "id": "q3_7"
-    },
-    {
-      "pergunta": "O fluxo de apresentação foi coerente?",
-      "id": "q3_8"
-    },
-    {
-      "pergunta": "Os apresentadores demonstraram conhecer bem a dor e sua solução?",
-      "id": "q3_9"
-    },
-    {
       "pergunta": "A apresentação foi clara e direta?",
-      "id": "q3_10"
+      "id": "q3_3"
     }
   ]
 }

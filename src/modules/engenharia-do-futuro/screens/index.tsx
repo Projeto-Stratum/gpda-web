@@ -21,13 +21,15 @@ export default function TeamsScreen() {
     team_2: 0,
   });
 
+  console.log(judges);
+
   const connectId = Cookies.get(CookieKey.UserId);
   const router = useRouter();
 
   useEffect(() => {
 
     if (judges) {
-      const judgeData = judges.find(item => item.name === connectId);
+      const judgeData = judges.find(item => item.name.toUpperCase() === connectId);
       if (!judgeData) return;
       setJudgeData(judgeData);
     }

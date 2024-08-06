@@ -2,21 +2,12 @@ export interface QuestionarioPayload {
     q1_1: string;
     q1_2: string;
     q1_3: string;
-    q1_4: string;
-    q1_5: string;
-    q1_6: string;
-    q1_7: string;
     q2_1: string;
     q2_2: string;
     q2_3: string;
-    q2_4: string;
-    q2_5: string;
-    q2_6: string;
-    q2_7: string;
     q3_1: string;
     q3_2: string;
     q3_3: string;
-    q3_4: string;
 }
 
 export type QuestaoType = {

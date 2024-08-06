@@ -2,12 +2,13 @@ import { JudgeAuthPayload } from '@/entities/questionario';
 import AuthLayout from '@/layouts/Auth';
 import { useAuthenticateJudge } from '@/services/eng-futuro';
 import { CookieKey, setCookie } from '@/utils/cookies';
+import { formatToUppercaseLetters } from '@/utils/helpers/Masks';
 import { useRouter } from 'next/router';
 import React, { ReactElement } from 'react';
 import { useForm } from 'react-hook-form';
 
 const VerifyJudgeScreen = () => {
-  const { register, handleSubmit, setError,
+  const { register, setValue, handleSubmit, setError,
      formState: { errors, isSubmitted, isValid, isSubmitting } } = useForm<JudgeAuthPayload>();
   const { replace } = useRouter();
 
@@ -109,7 +110,9 @@ const VerifyJudgeScreen = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nome</label>
-                    <input type="text" id="name" {...register(`name`, { required: true })} className="w-full p-2 mt-1 transition-colors duration-300 border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"></input>
+                    <input type="text" id="name" {...register(`name`, { required: true, onChange: (e) => {
+                    setValue("name", formatToUppercaseLetters(e.target.value));
+                  }, })} className="w-full p-2 mt-1 transition-colors duration-300 border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"></input>
                     <div>
                         {errors.name && isSubmitted && <span className="text-sm text-red-500">{errors.name?.message || 'Campo incorreto'}</span>}
                     </div>

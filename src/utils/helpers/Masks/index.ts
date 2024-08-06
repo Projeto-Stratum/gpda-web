@@ -16,6 +16,20 @@ export const formatToOnlyLetters = (value: string) => {
   return onlyLetters;
 };
 
+export const formatToUppercaseLetters = (value: string): string => {
+  if (!value) {
+    return "";
+  }
+
+  const formattedValue = value
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "") 
+  .replace(/[^a-zA-Z\s]/g, "")
+  .toUpperCase();
+
+  return formattedValue;
+}
+
 export const formatToDate = (value: string) => {
   if (!value) {
     return "";
