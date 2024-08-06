@@ -7,7 +7,6 @@ import myData from "@/utils/mockData/noticias.json";
 export default function NewsLetterScreen() {
   const { data } = myData;
   const isLoading = false;
-  console.log(data);
 
   return (
     <>

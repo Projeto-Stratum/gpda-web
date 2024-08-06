@@ -41,7 +41,6 @@ export default function TeamAvaliationScreen() {
   const onSubmit = (data: QuestionarioPayload) => {
     if (!id || typeof id !== 'string') return;
     
-    data.name = 'luis felipe'
     create({data, id});
   };
 

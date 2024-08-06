@@ -1,12 +1,29 @@
+import { JudgeAuthPayload } from '@/entities/questionario';
 import AuthLayout from '@/layouts/Auth';
+import { useAuthenticateJudge } from '@/services/eng-futuro';
+import { CookieKey, setCookie } from '@/utils/cookies';
+import { useRouter } from 'next/router';
 import React, { ReactElement } from 'react';
 import { useForm } from 'react-hook-form';
 
 const VerifyJudgeScreen = () => {
-  const { register, handleSubmit, formState: { errors, isSubmitted, isValid, isSubmitting } } = useForm();
+  const { register, handleSubmit, setError,
+     formState: { errors, isSubmitted, isValid, isSubmitting } } = useForm<JudgeAuthPayload>();
+  const { replace } = useRouter();
 
-  const onSubmit = (data) => {
-    console.log(data)
+  const { mutate, isLoading, isSuccess } = useAuthenticateJudge({
+    onSuccess: async (data) => {
+        // setCookie(CookieKey.JwtAuthToken, data.name);
+        setCookie(CookieKey.UserId, data.name);
+        replace('/engenharia-do-futuro/avaliacao');
+    },
+    onError: () => {
+        setError('name', { message: 'Nome inválido' });
+    },
+  });
+
+  const onSubmit = (data: JudgeAuthPayload) => {
+    mutate(data);
   };
 
 
@@ -92,12 +109,16 @@ const VerifyJudgeScreen = () => {
           
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div>
-                    <label htmlFor="username" className="block text-sm font-medium text-gray-700">Nome</label>
-                    <input type="text" id="username" {...register(`username`, { required: true })} className="w-full p-2 mt-1 transition-colors duration-300 border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"></input>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Nome</label>
+                    <input type="text" id="name" {...register(`name`, { required: true })} className="w-full p-2 mt-1 transition-colors duration-300 border rounded-md focus:border-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"></input>
+                    <div>
+                        {errors.name && isSubmitted && <span className="text-sm text-red-500">{errors.name?.message || 'Campo incorreto'}</span>}
+                    </div>
                 </div>
+
                 
                 <div>
-                    <button type="submit" className="w-full p-2 text-white transition-colors duration-300 bg-black rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">Validar</button>
+                    <button disabled={isLoading} type="submit" className="w-full p-2 text-white transition-colors duration-300 bg-black rounded-md hover:bg-gray-800 focus:outline-none focus:bg-black focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">{isLoading ? 'Carregando' : 'Validar'}</button>
                 </div>
             </form>
             

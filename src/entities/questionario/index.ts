@@ -1,6 +1,4 @@
 export interface QuestionarioPayload {
-    id: string;
-    name: string;
     q1_1: string;
     q1_2: string;
     q1_3: string;
@@ -37,5 +35,18 @@ export interface AvaliacaoResponse {
     message: string;
 }
 
+export interface JudgeAuthPayload {
+    name: string;
+}
+
+export interface JudgeAuthResponse {
+    name: string;
+    status: string;
+}
+
+export interface AdminAuthPayload {
+    username: string;
+    password: string;
+}
 
   
