@@ -70,14 +70,14 @@ export default function TeamsScreen() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.3 }}
-                      className="flex justify-center"
+                      className="flex justify-center mt-12"
                     >
                       <Link
                         href={`/engenharia-do-futuro/avaliacao/${time.team_name.replace(/\s/g, "-")}?id=${time.team_id}`}
                         passHref
                         className="max-w-fit"
                       >
-                        <button disabled={judgeData[`team_${time.team_id}`] === 1} className="px-4 relative group hover:animate-buttonColorMouseIn py-3 mt-12 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
+                        <button disabled={judgeData[`team_${time.team_id}`] === 1} className="px-4 relative group hover:animate-buttonColorMouseIn py-3 text-white text-sm font-bold w-72 min-w-[10rem] uppercase border-2 hover:text-black hover:bg-white border-white  transition-colors duration-300 overflow-hidden">
                           {judgeData && judgeData[`team_${time.team_id}`] === 1 ? 'Já Avaliado' : 'Avaliar'}
                           <span className="absolute left-0 right-0 z-0 w-full h-full group-hover:bg-white -bottom-full group-hover:animate-overlayMouseIn"></span>
                         </button>
