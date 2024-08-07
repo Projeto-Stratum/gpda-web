@@ -40,4 +40,8 @@ export interface AdminAuthPayload {
     password: string;
 }
 
+export interface ResultResponse {
+    [key: string]: number;
+}
+
   

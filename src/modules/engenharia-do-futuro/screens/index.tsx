@@ -21,8 +21,6 @@ export default function TeamsScreen() {
     team_2: 0,
   });
 
-  console.log(judges);
-
   const connectId = Cookies.get(CookieKey.UserId);
   const router = useRouter();
 

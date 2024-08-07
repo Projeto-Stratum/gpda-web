@@ -1,10 +1,10 @@
-import { QuestionarioPayload, JudgeAuthPayload, AdminAuthPayload, JudgeAuthResponse } from "@/entities/questionario";
+import { QuestionarioPayload, JudgeAuthPayload, AdminAuthPayload, JudgeAuthResponse, ResultResponse } from "@/entities/questionario";
 import { TimesEngFuturo } from "@/entities/Times";
 import { APIError, RawResponse } from "@/entities/Response";
 import { apiV1 } from "@/libs/axios";
 import parseResponseData from "@/utils/parseResponseData";
 import { useMutation, UseMutationOptions, useQuery } from "@tanstack/react-query";
-import { keyListJudges, keyListTeams } from "./keys";
+import { keyGetResult, keyListJudges, keyListTeams } from "./keys";
 import { JudgeEngFut } from "@/entities/Judges";
 
 export const usePostVote = (
@@ -66,3 +66,9 @@ export const useListJudges = () => {
     apiV1.get<RawResponse<JudgeEngFut[]>>(`/admin/judges/`).then(parseResponseData)
   );
 };
+
+export const useGetResults = () => {
+  return useQuery(keyGetResult(), () =>
+    apiV1.get<RawResponse<ResultResponse[]>>(`/admin/vote/result?force=true`).then(parseResponseData)
+  );
+}
