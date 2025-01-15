@@ -27,27 +27,6 @@ export default function HomeScreen() {
             </motion.div>
           </div>
           <div>
-            <div className="mb-3 space-y-2">
-              <div className="flex flex-col justify-center gap-4 md:flex-row">
-                <input
-                  className="w-full caret-white placeholder:text-white/60 pr-10 pl-6 font-semibold md:max-w-[60%] h-[50px] border-2 border-white/60 bg-white/10 rounded text-black outline-none focus:border-white"
-                  type="text"
-                  disabled
-                  placeholder="Email"
-                  autoComplete="off"
-                  aria-label="Service Email"
-                />
-                <button disabled className="bg-white md:max-w-[30%] flex-1 text-black uppercase min-h-[50px] rounded text-xs font-bold py-1 px-2">
-                  CADASTRAR EMAIL
-                </button>
-              </div>
-              <div className="text-sm md:px-6">
-                <h2 className="max-w-full font-medium text-white/80 text-start">
-                  Fique por dentro das notícias do mundo aeroespacial se
-                  inscrevendo em nossa newsletter com seu email.
-                </h2>
-              </div>
-            </div>
             <span className="flex justify-center animate-bounce">
               <KeyboardArrowDown size={40} className=" animate-pulse" />
             </span>
